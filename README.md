@@ -16,6 +16,7 @@ Chartist for the wonderful charts
 We are very excited to share this dashboard with you and we look forward to hearing your feedback!
 
 V1.0 - 20 August 2015 initial release
+
 V1.1 - 08 September 2015 - bug fixing [current version]
 - added company name/logo inside the sidebar for small screens
 - fixed bug for notification with close button on small screens
