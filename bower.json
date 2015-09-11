@@ -1,0 +1,34 @@
+{
+  "name": "light-bootstrap-dashboard",
+  "version": "1.1.0",
+  "homepage": "http://demos.creative-tim.com/light-bootstrap-dashboard",
+  "description": "Light Bootstrap Dashboard is an admin dashboard template designed to be beautiful and simple.",
+  "main": "dashboard.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "dashboard",
+    "bootstrap",
+    "light"
+  ],
+  "authors": [
+    "Creative Tim <hello@creative-tim.com>"
+  ],
+  "license": "http://www.creative-tim.com/license",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "~3.4.0",
+    "bootstrap": "~3.3.5",
+    "chartist": "~0.9.4",
+    "font-awesome": "~4.4.0",
+    "jquery": "~2.1.4",
+    "remarkable-bootstrap-notify": "~3.1.3"
+  }
+}
