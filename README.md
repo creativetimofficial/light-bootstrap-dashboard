@@ -2,7 +2,7 @@
 
 Live preview - http://demos.creative-tim.com/light-bootstrap-dashboard
 
-Light Bootstrap Dashboard is an admin dashboard template designed to be beautiful and simple. 
+Light Bootstrap Dashboard is an admin dashboard template designed to be beautiful and simple.
 
 Light Bootstrap Dashboard is an admin dashboard template designed to be beautiful and simple. It is built on top of Bootstrap 3 and it is fully responsive. It comes with a big collections of elements that will offer you multiple possibilities to create the app that best fits your needs. It can be used to create admin panels, project management systems, web applications backend, CMS or CRM.
 
@@ -23,3 +23,9 @@ V1.1 - 08 September 2015 - bug fixing [current version]
 - fix live preview bug for download on small screens
 - fix table responsive for small screens
 - added new labels for chartist on small screens
+
+V1.2 - 17 January 2016 - New Page
+- for those who want to upsell inside their dashboard we added a new page "Upgrade to PRO" with a pricing and options table
+
+V1.3 - 22 January 2016 - New Template page + Video Tutorial [current version]
+- added the default template page + youtube video tutorial on how to create an Admin Template (link coming soon)
