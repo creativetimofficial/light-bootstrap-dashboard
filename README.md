@@ -15,7 +15,7 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 + [Live Preview](http://demos.creative-tim.com/light-bootstrap-dashboard)
 + [Video Tutorial](https://www.youtube.com/watch?v=c3M3NQtFyqM)
-+ [Light Bootstrap Dashboard PRO](http://demos.creative-tim.com/light-bootstrap-dashboard-pro) (from $39)
++ [Light Bootstrap Dashboard PRO](http://www.creative-tim.com/product/light-bootstrap-dashboard-pro) (from $39)
 
 ## Quick start
 
