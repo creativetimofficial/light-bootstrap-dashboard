@@ -94,7 +94,7 @@ Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
 
 Freebies: <http://www.creative-tim.com/products>
 
-Affiliate Program (earn money): <http://www.creative-tim.com/create-affiliate-request>
+Affiliate Program (earn money): <http://www.creative-tim.com/affiliates/new>
 
 Social Media:
 
