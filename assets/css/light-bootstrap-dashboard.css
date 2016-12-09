@@ -3408,6 +3408,11 @@ body > .navbar-collapse[data-color="purple"]:after {
   .table-responsive {
     overflow: visible;
   }
+
+  .navbar-nav p {
+    line-height: normal;
+    margin: 0;
+  }
 }
 @media (max-width: 991px) {
   .table-responsive {

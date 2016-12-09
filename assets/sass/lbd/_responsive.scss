@@ -394,6 +394,11 @@
         overflow: visible;
     }
 
+    .navbar-nav p{
+        line-height: normal;
+        margin: 0;
+    }
+
 }
 
 @media (max-width: 991px){
