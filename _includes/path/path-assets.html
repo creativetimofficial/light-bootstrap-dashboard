@@ -1,0 +1,17 @@
+{% assign path-assets = '' %}
+{% assign path-pages = '' %}
+
+{% assign depth = page.url | split: '/' | size | minus: 1 %}
+{% if    depth <= 1 %}
+        {% assign path-assets = '.' %}
+
+{% elsif depth == 2 %}
+        {% assign path-assets = '..' %}
+        {% assign path-pages = '.' %}
+
+{% elsif depth == 3 %}
+        {% assign path-assets = '../..' %}
+        {% assign path-pages = '..' %}
+{% elsif depth == 4 %}
+        {% assign path-assets = '../../..' %}
+{% endif %}

@@ -1,0 +1,16 @@
+function isPromise (obj) {
+	// See: https://github.com/ssnau/xkit/blob/master/util/is-promise.js
+	return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
+};
+
+function then (promiseOrResult, onFulfilled) {
+	if (isPromise(promiseOrResult)) {
+		return promiseOrResult.then(onFulfilled);
+	}
+	return onFulfilled(promiseOrResult);
+};
+
+module.exports = {
+  isPromise: isPromise,
+  then: then
+};

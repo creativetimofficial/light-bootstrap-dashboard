@@ -1,0 +1,79 @@
+<div class="sidebar" data-image="{{ path-assets }}/assets/img/blurred-image-1.jpg">
+    <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+
+    <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text">
+            Creative Tim
+        </a>
+    </div>
+
+    <div class="sidebar-wrapper">
+        {% if page.brand != "template-page" %}
+        <ul class="nav">
+            <li {% if page.brand == "Dashboard" %} class="nav-item active" {% endif %}>
+                <a class="nav-link" href="dashboard.html">
+                    <i class="now-ui-icons design_app"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li {% if page.brand == "User" %} class="nav-item active" {% endif %}>
+                <a class="nav-link" href="{{ path-pages }}/user.html">
+                    <i class="now-ui-icons users_single-02"></i>
+                    User Profile
+                </a>
+            </li>
+            <li {% if page.brand == "Table List" %} class="nav-item active" {% endif %}>
+                <a class="nav-link" href="{{ path-pages }}/table.html">
+                    <i class="now-ui-icons text_align-center"></i>
+                    Table List
+                </a>
+            </li>
+            <li {% if page.brand == "Typography" %} class="nav-item active" {% endif %}>
+                <a class="nav-link" href="{{ path-pages }}/typography.html">
+                    <i class="now-ui-icons files_paper"></i>
+                    Typography
+                </a>
+            </li>
+            <li {% if page.brand == "Icons" %} class="nav-item active" {% endif %}>
+                <a class="nav-link" href="{{ path-pages }}/icons.html">
+                    <i class="now-ui-icons objects_diamond"></i>
+                    Icons
+                </a>
+            </li>
+            <li {% if page.brand == "Maps" %} class="nav-item active" {% endif %}>
+                <a class="nav-link" href="{{ path-pages }}/maps.html">
+                    <i class="now-ui-icons location_pin"></i>
+                    Maps
+                </a>
+            </li>
+            <li {% if page.brand == "Notifications" %} class="nav-item active" {% endif %}>
+                <a class="nav-link" href="{{ path-pages }}/notifications.html">
+                    <i class="now-ui-icons ui-1_bell-53"></i>
+                    Notifications
+                </a>
+            </li>
+        </ul>
+        {% else %}
+
+        <ul class="nav">
+            <li {% if page.brand == "Example1" %} class="nav-item active" {% endif %}>
+                <a href="#pablo">
+                    <i class="now-ui-icons design_app"></i>
+                    <p>Example 1</p>
+                </a>
+            </li>
+            <li {% if page.brand == "Example2" %} class="nav-item active" {% endif %}>
+                <a href="#pablo">
+                    <i class="now-ui-icons users_single-02"></i>
+                    <p>Example 2</p>
+                </a>
+            </li>
+        </ul>
+
+        {% endif %}
+    </div>
+</div>

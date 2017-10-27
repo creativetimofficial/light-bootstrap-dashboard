@@ -1,0 +1,82 @@
+var valueParser = require('postcss-value-parser'),
+	isPromise = require('./promiseHelpers').isPromise,
+	then = require('./promiseHelpers').then;
+
+function processArgs(nodes, functions) {
+	var args = [];
+	var argsContainPromise = false;
+
+	var last = nodes.reduce(function (prev, node) {
+		if (node.type === 'div' && node.value === ',') {
+			args.push(prev);
+			return '';
+		}
+		if (node.type !== 'function' || !functions.hasOwnProperty(node.value)) {
+			return prev + valueParser.stringify(node);
+		}
+		var resultOrPromise = transformFunction(node, functions);
+		argsContainPromise = argsContainPromise || isPromise(resultOrPromise);
+		return then(resultOrPromise, function (result) {
+			return prev + result;
+		});
+	}, '');
+	if (last) {
+		args.push(last);
+	}
+
+	if (argsContainPromise) {
+		args = Promise.all(args);
+	}
+
+	return args;
+}
+
+function transformFunction(node, functions) {
+	var argsOrPromise = processArgs(node.nodes, functions);
+	return then(argsOrPromise, function (args) {
+		var func = functions[node.value];
+		return func.apply(func, args);
+	});
+}
+
+function transformValue(value, functions) {
+	var promises = [];
+
+	var values = valueParser(value).walk(function (node) {
+		if (node.type !== 'function' || !functions.hasOwnProperty(node.value)) {
+			return;
+		}
+		var resultOrPromise = transformFunction(node, functions);
+		resultOrPromise = then(resultOrPromise, function (result) {
+			node.type = 'word';
+			node.value = result;
+		});
+		if (isPromise(resultOrPromise)) {
+			promises.push(resultOrPromise);
+		}
+	}, true);
+
+	var maybePromises = promises.length ? Promise.all(promises) : null;
+	return then(maybePromises, function () {
+		return values.toString();
+	});
+}
+
+function transformNode (node, functions) {
+	if (node.type === 'decl') {
+		var resultOrPromise = transformValue(node.value, functions);
+		return then(resultOrPromise, function (result) {
+			node.value = result;
+		});
+	} else if (node.type === 'atrule') {
+		var resultOrPromise = transformValue(node.params, functions);
+		return then(resultOrPromise, function (result) {
+			node.params = result;
+		});
+	}
+}
+
+module.exports = {
+	transformValue: transformValue,
+	transformNode: transformNode
+};

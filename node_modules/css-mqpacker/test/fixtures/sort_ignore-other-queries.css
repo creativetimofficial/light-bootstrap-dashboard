@@ -1,0 +1,21 @@
+.foo {
+  z-index: 0;
+}
+
+@media screen and (min-width: 2em) {
+  .foo {
+    z-index: 2;
+  }
+}
+
+@media all, (min-width: 3em) {
+  .foo {
+    z-index: 3;
+  }
+}
+
+@media (min-width: 1em) and (min-height: 1em) {
+  .foo {
+    z-index: 1;
+  }
+}

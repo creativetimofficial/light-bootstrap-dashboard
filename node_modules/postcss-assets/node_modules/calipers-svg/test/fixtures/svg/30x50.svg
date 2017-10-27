@@ -1,0 +1,4 @@
+<!-- View box only -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50">
+  <ellipse cx="15" cy="25" rx="15" ry="25"/>
+</svg>

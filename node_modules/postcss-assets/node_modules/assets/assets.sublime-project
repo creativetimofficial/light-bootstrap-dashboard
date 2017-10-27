@@ -1,0 +1,15 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "folder_exclude_patterns": [
+        ".nyc_output",
+        "coverage",
+        "node_modules"
+      ],
+      "file_exclude_patterns": [
+        "*.sublime-*"
+      ]
+    }
+  ]
+}

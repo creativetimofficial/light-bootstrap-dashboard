@@ -1,0 +1,18 @@
+.foo {
+  z-index: 1;
+}
+
+.bar {
+  z-index: 2;
+}
+
+/* Comment */
+
+@media (min-width: 999px) {
+  .foo {
+    z-index: 3;
+  }
+  .bar {
+    z-index: 4;
+  }
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+
+
+
+
+
+    <meta charset="utf-8" />
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Light Bootstrap Dashboard</title>
+
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+<!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+<!-- CSS Files -->
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="../assets/css/light-bootstrap-dashboard.css" rel="stylesheet" />
+
+<!-- CSS Just for demo purpose, don't include it in your project -->
+<link href="../assets/css/demo.css" rel="stylesheet" />
+
+
+
+
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="sidebar" data-image="../assets/img/blurred-image-1.jpg">
+    <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+
+    <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text">
+            Creative Tim
+        </a>
+    </div>
+
+    <div class="sidebar-wrapper">
+        
+        <ul class="nav">
+            <li >
+                <a class="nav-link" href="dashboard.html">
+                    <i class="now-ui-icons design_app"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li >
+                <a class="nav-link" href="./user.html">
+                    <i class="now-ui-icons users_single-02"></i>
+                    User Profile
+                </a>
+            </li>
+            <li >
+                <a class="nav-link" href="./table.html">
+                    <i class="now-ui-icons text_align-center"></i>
+                    Table List
+                </a>
+            </li>
+            <li >
+                <a class="nav-link" href="./typography.html">
+                    <i class="now-ui-icons files_paper"></i>
+                    Typography
+                </a>
+            </li>
+            <li >
+                <a class="nav-link" href="./icons.html">
+                    <i class="now-ui-icons objects_diamond"></i>
+                    Icons
+                </a>
+            </li>
+            <li  class="nav-item active" >
+                <a class="nav-link" href="./maps.html">
+                    <i class="now-ui-icons location_pin"></i>
+                    Maps
+                </a>
+            </li>
+            <li >
+                <a class="nav-link" href="./notifications.html">
+                    <i class="now-ui-icons ui-1_bell-53"></i>
+                    Notifications
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</div>
+
+
+            <div class="main-panel">
+                <!-- Navbar -->
+<nav class="navbar navbar-toggleable-md navbar-default">
+	<div class="container">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+		</button>
+
+		
+		<div class="navbar-minimize">
+			<!-- <button type="button" class="btn btn-neutral btn-icon btn-icon-mini btn-round" id="sidebar-collapse">
+				<i class="now-ui-icons gestures_tap-01"></i>
+			</button> -->
+			<button type="button" class="navbar-toggler">
+				<span class="navbar-toggler-bar bar1"></span>
+				<span class="navbar-toggler-bar bar2"></span>
+				<span class="navbar-toggler-bar bar3"></span>
+			</button>
+		</div>
+
+		<a class="navbar-brand" href="#pablo"> Maps </a>
+
+		
+		<!-- <div class="justify-content-end">
+
+		</div> -->
+
+	    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+			
+			<ul class="nav navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-toggle="dropdown">
+                        <i class="fa fa-dashboard"></i>
+                    </a>
+                </li>
+                <li class="dropdown nav-item">
+                      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <i class="fa fa-globe"></i>
+                            <span class="notification">5</span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notification 1</a>
+                        <a class="dropdown-item" href="#">Notification 2</a>
+                        <a class="dropdown-item" href="#">Notification 3</a>
+                        <a class="dropdown-item" href="#">Notification 4</a>
+                        <a class="dropdown-item" href="#">Another notification</a>
+                      </ul>
+                </li>
+                <li class="nav-item">
+                   <a href="" class="nav-link">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#pablo">
+						Account
+					</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+							Dropdown
+
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+						<div class="divider"></div>
+						<a class="dropdown-item" href="#">Separated link</a>
+					</div>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#pablo">
+					   Log out
+					</a>
+				</li>
+			</ul>
+
+			
+	    </div>
+	</div>
+</nav>
+<!-- End Navbar -->
+
+
+                
+                    <div class="map-container">
+    <div id="map"></div>
+</div>
+
+                
+
+                <footer class="footer" >
+    <div class="container">
+        <nav >
+            <ul class="mr-auto">
+                <li>
+                    <a href="https://www.creative-tim.com">
+                        Creative Tim
+                    </a>
+                </li>
+                <li>
+                    <a href="http://presentation.creative-tim.com">
+                       About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="http://blog.creative-tim.com">
+                       Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/creativetimofficial/now-ui-dashboard/blob/master/LICENSE.md">
+                        MIT License
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="copyright ml-auto">
+            &copy; <script>document.write(new Date().getFullYear())</script>, Designed by <a href="http://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+        </div>
+    </div>
+</footer>
+
+            </div>
+        </div>
+        <!--   -->
+        <!-- <div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+        <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+        </a>
+        <ul class="dropdown-menu">
+			<li class="header-title"> Sidebar Background</li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger background-color">
+                    <div class="badge-colors text-center">
+						<span class="badge filter badge-yellow" data-color="yellow"></span>
+                        <span class="badge filter badge-blue" data-color="blue"></span>
+                        <span class="badge filter badge-green" data-color="green"></span>
+                        <span class="badge filter badge-orange active" data-color="orange"></span>
+                        <span class="badge filter badge-red" data-color="red"></span>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger">
+                    <p>Sidebar Image</p>
+                    <div class="togglebutton switch-sidebar-image">
+                        <input type="checkbox" name="checkbox" class="bootstrap-switch"
+                          data-on-label="ON"
+                          data-off-label="OFF"
+                          />
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+
+            <li class="header-title">Images</li>
+            <li class="active">
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../assets/img/bg7.jpg" alt="" />
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../assets/img/blurred-image-1.jpg" alt="" />
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../assets/img/sidebar-3.jpg" alt="" />
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../assets/img/sidebar-4.jpg" alt="" />
+                </a>
+            </li>
+
+            <li class="button-container">
+                <div class="">
+                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block btn-round">Get Free Demo</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+ -->
+    </body>
+
+    <!--   Core JS Files   -->
+<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/tether.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+
+
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="../assets/js/plugins/bootstrap-switch.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!--  Chartist Plugin  -->
+<script src="../assets/js/plugins/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="../assets/js/plugins/bootstrap-notify.js"></script>
+
+<!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="../assets/js/light-bootstrap-dashboard.js" type="text/javascript"></script>
+
+<!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+<script src="../assets/js/demo.js"></script>
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // Javascript method's body can be found in assets/js/demos.js
+            demo.initGoogleMaps();
+
+        });
+    </script>
+
+
+
+
+</html>

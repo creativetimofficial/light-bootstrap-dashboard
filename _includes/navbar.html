@@ -1,0 +1,106 @@
+<!-- Navbar -->
+<nav class="navbar navbar-toggleable-md {% if page.brand != "documentation" %}navbar-default{% endif %}{% if page.brand == "documentation" %} bg-primary navbar-transparent fixed-top{% endif %}"{% if page.brand == "documentation"%}color-on-scroll="500"{% endif %}>
+	<div class="container">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+		</button>
+
+		{% if page.brand != "documentation" %}
+		<div class="navbar-minimize">
+			<!-- <button type="button" class="btn btn-neutral btn-icon btn-icon-mini btn-round" id="sidebar-collapse">
+				<i class="now-ui-icons gestures_tap-01"></i>
+			</button> -->
+			<button type="button" class="navbar-toggler">
+				<span class="navbar-toggler-bar bar1"></span>
+				<span class="navbar-toggler-bar bar2"></span>
+				<span class="navbar-toggler-bar bar3"></span>
+			</button>
+		</div>
+
+		<a class="navbar-brand" href="#pablo"> {{ page.brand }} </a>
+
+		{% else %}
+
+		<a class="navbar-brand" href="http://demos.creative-tim.com/now-ui-dashboard/index.html" rel="tooltip" title="Designed by Invision. Coded by Creative Tim" data-placement="bottom" target="_blank">
+			Light Bootstrap Dashboard - Docs
+		</a>
+
+		{% endif %}
+		<!-- <div class="justify-content-end">
+
+		</div> -->
+
+	    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+			{% if page.brand != "documentation" %}
+			<ul class="nav navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-toggle="dropdown">
+                        <i class="fa fa-dashboard"></i>
+                    </a>
+                </li>
+                <li class="dropdown nav-item">
+                      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <i class="fa fa-globe"></i>
+                            <span class="notification">5</span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notification 1</a>
+                        <a class="dropdown-item" href="#">Notification 2</a>
+                        <a class="dropdown-item" href="#">Notification 3</a>
+                        <a class="dropdown-item" href="#">Notification 4</a>
+                        <a class="dropdown-item" href="#">Another notification</a>
+                      </ul>
+                </li>
+                <li class="nav-item">
+                   <a href="" class="nav-link">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#pablo">
+						Account
+					</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+							Dropdown
+
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+						<div class="divider"></div>
+						<a class="dropdown-item" href="#">Separated link</a>
+					</div>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#pablo">
+					   Log out
+					</a>
+				</li>
+			</ul>
+
+			{% else %}
+
+			<ul class="navbar-nav">
+			   	<li class="nav-item">
+				   	<a class="nav-link" href="../examples/dashboard.html">Back to Dashboard</a>
+			   	</li>
+			   	<li class="nav-item">
+				   	<a class="nav-link" href="https://github.com/creativetimofficial/now-ui-dashboard/issues">Have an issue?</a>
+			   	</li>
+			</ul>
+
+			{% endif %}
+	    </div>
+	</div>
+</nav>
+<!-- End Navbar -->

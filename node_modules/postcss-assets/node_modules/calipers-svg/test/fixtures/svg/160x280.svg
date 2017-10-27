@@ -1,0 +1,4 @@
+<!-- Width and view box -->
+<svg xmlns="http://www.w3.org/2000/svg" width="160" viewBox="0 0 80 140">
+  <ellipse cx="40" cy="70" rx="40" ry="70"/>
+</svg>

@@ -1,0 +1,27 @@
+.foo {
+  z-index: 0;
+}
+
+@media (min-width: 1em) {
+  .foo {
+    z-index: 1;
+  }
+}
+
+@media (min-width: 2em) {
+  .foo {
+    z-index: 2;
+  }
+}
+
+@media (min-resolution: 1dppx) {
+  .foo {
+    z-index: 3;
+  }
+}
+
+@media tv {
+  .foo {
+    z-index: 4;
+  }
+}

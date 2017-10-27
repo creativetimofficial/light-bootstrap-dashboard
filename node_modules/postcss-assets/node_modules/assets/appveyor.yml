@@ -1,0 +1,24 @@
+# Test against these versions of Node.js
+environment:
+  matrix:
+    - nodejs_version: '' # is latest stable
+    - nodejs_version: 4
+    - nodejs_version: 0.12
+
+# Install scripts (runs after repo cloning)
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - set CI=true
+  - set AVA_APPVEYOR=true
+  - npm install
+
+# Post-install test scripts
+test_script:
+  # Output useful info for debugging
+  - node --version
+  - npm --version
+  # Run tests
+  - npm test
+
+# Don't actually build
+build: off

@@ -1,0 +1,329 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"resol",
+				"resolvedPath"
+			],
+			[
+				"res",
+				"resolve"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "lint",
+		"selected_items":
+		[
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 402.0
+	},
+	"console":
+	{
+		"height": 453.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Z/docs/assets",
+		"/Z/docs/assets/lib",
+		"/Z/docs/assets/test"
+	],
+	"file_history":
+	[
+		"/Z/docs/assets/test/path.js",
+		"/Z/docs/assets/lib/path.js",
+		"/Z/docs/assets/lib/url.js",
+		"/Z/docs/assets/test/url.js",
+		"/Z/docs/assets/README.md",
+		"/Z/docs/postcss-assets/test/quote.js",
+		"/Z/docs/postcss-assets/package.json",
+		"/Z/docs/postcss-assets/test/assets.js",
+		"/Z/docs/postcss-assets/.eslintrc",
+		"/Z/docs/postcss-assets/postcss-assets.sublime-project",
+		"/Z/docs/postcss-assets/LICENSE.txt",
+		"/Z/docs/postcss-assets/index.js",
+		"/Z/docs/postcss-assets/test/unescape-css.js",
+		"/Z/docs/postcss-assets/.gitignore",
+		"/Z/docs/postcss-assets/appveyor.yml",
+		"/Z/docs/postcss-assets/test/fixtures/resolve.expected.css",
+		"/Z/docs/postcss-assets/test/fixtures/resolve-cachebuster.expected.css",
+		"/Z/docs/postcss-assets/test/fixtures/resolve-cachebuster-string.expected.css",
+		"/Z/docs/postcss-assets/test/fixtures/resolve-cachebuster-object.expected.css",
+		"/Z/docs/postcss-assets/test/fixtures/resolve-cachebuster-falsy.expected.css",
+		"/Z/docs/postcss-assets/test/fixtures/resolve.css",
+		"/Z/docs/postcss-assets/test/fixtures/resolve-cachebuster.css",
+		"/Z/docs/postcss-assets/test/fixtures/dimensions-invalid.css",
+		"/Z/docs/postcss-assets/test/unquote.js",
+		"/Z/docs/postcss-assets/README.md",
+		"/Z/docs/postcss-assets/test/fixtures/inline.expected.css",
+		"/Z/docs/postcss-assets/test/fixtures/inline.css",
+		"/Z/docs/postcss-assets/.travis.yml",
+		"/Z/docs/postcss-assets/postcss-assets.sublime-project~",
+		"/Z/docs/brasserie-4/knexfile.js",
+		"/Z/docs/brasserie-4/migrations/20160129215050_users.js",
+		"/Z/docs/brasserie-4/source/server.es6",
+		"/Z/docs/brasserie-4/knexfile.es6",
+		"/Z/docs/brasserie-4/migrations/20160129215050_users.es6",
+		"/Z/docs/brasserie-4/source/bookshelf.js",
+		"/Z/docs/brasserie-4/package.json",
+		"/Z/docs/brasserie-4/brasserie.sublime-project",
+		"/Z/docs/brasserie-4/.gitignore",
+		"/Z/docs/brasserie-4/source/api.es6",
+		"/Z/docs/brasserie-4/.babelrc",
+		"/Z/docs/brasserie-4/source/brasserie.sublime-project~",
+		"/D/Tools/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+		"/D/Tools/Sublime Text 3/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/borodean/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 107.0,
+		"where_history":
+		[
+			"",
+			"*.css",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"currentPath",
+			"current",
+			"currentPath",
+			"123",
+			"ize(",
+			"()",
+			"'",
+			"resolvedDataUrl",
+			"\"",
+			"'",
+			"\"",
+			"'",
+			"regex",
+			"test",
+			"'test",
+			"еуые",
+			"'test/",
+			"'test",
+			"test/",
+			"it",
+			"it(",
+			"test(",
+			"test",
+			").to.equal(",
+			"expect",
+			"it",
+			").to.equal(",
+			"expect",
+			"it",
+			".to.equal",
+			"expect",
+			"it",
+			"borodean",
+			"assets",
+			"mime",
+			"directory-encoder",
+			"cssesc",
+			"canonical-path",
+			"export function ",
+			"db",
+			"'",
+			"api",
+			"express"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "assets.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"url",
+				"lib\\url.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"index",
+				"index.js"
+			],
+			[
+				"appv",
+				"appveyor.yml"
+			],
+			[
+				"ignore",
+				".gitignore"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"server",
+				"source\\server.es6"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"ap",
+				"source\\api.es6"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 325.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

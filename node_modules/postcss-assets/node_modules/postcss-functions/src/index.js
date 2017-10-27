@@ -1,0 +1,35 @@
+var postcss = require('postcss'),
+	assign = require('object-assign'),
+	glob = require('glob'),
+	path = require('path'),
+	transformNode = require('./transform').transformNode,
+	isPromise = require('./promiseHelpers').isPromise;
+
+module.exports = postcss.plugin('postcss-functions', function (opts) {
+	opts = assign({
+		functions: {},
+		glob: []
+	}, opts);
+
+	if (!(opts.glob instanceof Array)) opts.glob = [opts.glob];
+
+	opts.glob.forEach(function(pattern) {
+		glob.sync(pattern).forEach(function(file) {
+			var name = path.basename(file, path.extname(file));
+			opts.functions[name] = require(file);
+		});
+	});
+
+	return function (css) {
+		var promises = [];
+
+		css.walk(function (node) {
+			var maybePromise = transformNode(node, opts.functions);
+			if (isPromise(maybePromise)) {
+				promises.push(maybePromise);
+			}
+		});
+
+		return Promise.all(promises);
+	};
+});

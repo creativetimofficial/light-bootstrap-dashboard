@@ -1,0 +1,39 @@
+.foo {
+  z-index: 0;
+}
+
+@media (min-width: 3em) {
+  .foo {
+    z-index: 3;
+  }
+}
+
+@media (min-width: 2em) {
+  .foo {
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1em) {
+  .foo {
+    z-index: 1;
+  }
+}
+
+@media (min-width: 6em) {
+  .foo {
+    z-index: 6;
+  }
+}
+
+@media (min-width: 4em) {
+  .foo {
+    z-index: 4;
+  }
+}
+
+@media (min-width: 5em) {
+  .foo {
+    z-index: 5;
+  }
+}

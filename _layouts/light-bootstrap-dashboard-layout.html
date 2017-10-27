@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>{% include path/path-assets.html %}
+
+    {% include head.html %}
+
+    </head>
+
+    <body>
+        <div class="wrapper">
+            {% include sidebar.html %}
+
+            <div class="main-panel">
+                {% include navbar.html %}
+
+                {% if page.brand == "Maps" %}
+                    {{ content }}
+                {% else %}
+
+                    <div class="content">
+                        <div class="container-fluid">
+                            {{ content }}
+                        </div>
+                    </div>
+
+                 {% endif %}
+
+                {% include footer.html %}
+            </div>
+        </div>
+        <!--   -->
+        <!-- {% include fixed-plugin.html %} -->
+    </body>
+
+    {% include js/script.html %}
+
+</html>

@@ -1,0 +1,21 @@
+.foo {
+  z-index: 1;
+}
+
+@supports (display: auto) {
+  .foo {
+    z-index: 2;
+  }
+
+  @media (min-width: 1024px) {
+    .foo {
+      z-index: 3;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .foo {
+    z-index: 4;
+  }
+}
