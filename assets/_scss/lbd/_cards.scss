@@ -1,6 +1,5 @@
 .card{
     border-radius: $border-radius-base;
-    box-shadow: 0 1px 2px rgba(0,0,0,.05),0 0 0 1px rgba(63,63,68,.1);
     background-color: $white-color;
     margin-bottom: 30px;
 
@@ -48,7 +47,9 @@
     }
     .card-header{
         padding: 15px 15px 0;
-        background-color: #fff;
+        background-color: $white-color;
+        border-bottom: none !important;
+
     }
     .card-category,
     label{
@@ -88,6 +89,8 @@
         padding: 0;
         background-color: $transparent-bg;
         line-height: 30px;
+        border-top: none !important;
+        font-size: 14px;
 
         .legend{
             padding: 5px 0;
@@ -132,6 +135,10 @@
         height: 245px;
     }
 
+    .ct-label{
+        font-size: 1rem !important;
+    }
+
     .table{
         tbody td:first-child,
         thead th:first-child{
@@ -141,6 +148,7 @@
         tbody td:last-child,
         thead th:last-child{
             padding-right: 15px;
+            display: inline-flex;
         }
     }
 
@@ -201,5 +209,13 @@
 
     .card-image{
         border-radius: 4px;
+    }
+}
+
+.card.card-plain{
+    border: none !important;
+
+    .card-header{
+        background-color: transparent !important;
     }
 }

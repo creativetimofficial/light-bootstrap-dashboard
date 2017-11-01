@@ -119,6 +119,8 @@ $().ready(function(){
     });
 });
 
+type = ['primary','info','success','warning','danger'];
+
 demo = {
     initPickColor: function(){
         $('.pick-class-label').click(function(){
@@ -155,7 +157,7 @@ demo = {
 
         var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
 
-        md.startAnimationForLineChart(dailySalesChart);
+        // lbd.startAnimationForLineChart(dailySalesChart);
     },
 
     initDashboardPageCharts: function(){
@@ -225,7 +227,7 @@ demo = {
 
         var chartHours = Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
 
-        nowuiDashboard.startAnimationForLineChart(chartHours);
+        // lbd.startAnimationForLineChart(chartHours);
 
         var data = {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -256,7 +258,7 @@ demo = {
 
         var chartActivity = Chartist.Bar('#chartActivity', data, options, responsiveOptions);
 
-        nowuiDashboard.startAnimationForBarChart(chartActivity);
+        // lbd.startAnimationForBarChart(chartActivity);
 
         // /* ----------==========     Daily Sales Chart initialization    ==========---------- */
         //
@@ -276,10 +278,10 @@ demo = {
         //     chartPadding: { top: 0, right: 0, bottom: 0, left: 0},
         // }
         //
-        // var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
-        //
-        // nowuiDashboard.startAnimationForLineChart(dailySalesChart);
-        //
+        // var dailySalesChart = Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
+
+        // lbd.startAnimationForLineChart(dailySalesChart);
+
         //
         //
         // /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
@@ -303,7 +305,7 @@ demo = {
         // var completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);
         //
         // // start animation for the Completed Tasks Chart - Line Chart
-        // nowuiDashboard.startAnimationForLineChart(completedTasksChart);
+        // lbd.startAnimationForLineChart(completedTasksChart);
         //
         //
         // /* ----------==========     Emails Subscription Chart initialization    ==========---------- */
@@ -336,7 +338,7 @@ demo = {
         // var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChart', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
         //
         // //start animation for the Emails Subscription Chart
-        // nowuiDashboard.startAnimationForBarChart(emailsSubscriptionChart);
+        // lbd.startAnimationForBarChart(emailsSubscriptionChart);
 
     },
 
@@ -361,14 +363,14 @@ demo = {
     },
 
 	showNotification: function(from, align){
-    	color = 'primary';
+    	color = Math.floor((Math.random() * 4) + 1);
 
     	$.notify({
-        	icon: "now-ui-icons ui-1_bell-53",
-        	message: "Welcome to <b>Now Ui Dashboard</b> - a beautiful freebie for every web developer."
+        	icon: "nc-icon nc-app",
+        	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
 
         },{
-            type: color,
+            type: type[color],
             timer: 8000,
             placement: {
                 from: from,

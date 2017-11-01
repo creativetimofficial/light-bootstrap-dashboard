@@ -19,7 +19,6 @@ body > .navbar-collapse{
         overflow: auto;
         width: 260px;
         z-index: 4;
-
         padding-bottom: 100px;
     }
 
@@ -36,8 +35,10 @@ body > .navbar-collapse{
     }
 
     .logo{
-        padding: $navbar-padding-a;
+        padding: 10px 15px 9px 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        z-index: 4;
 
         p{
             float: left;
@@ -134,6 +135,28 @@ body > .navbar-collapse{
             position: absolute;
             right: 30px;
         }
+
+        .active-pro{
+            width: 100%;
+            bottom: 70px;
+
+            a{
+                color: $white-color !important;
+
+            }
+        }
+
+        .nav-link{
+            color: $white-color;
+            margin: 5px 15px;
+            opacity: .86;
+            border-radius: 4px;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            line-height: 30px;
+            font-size: 12px;
+            font-weight: 600;
+        }
     }
 
     .logo{
@@ -194,7 +217,7 @@ body > .navbar-collapse{
     }
 
     &:after{
-       @include icon-gradient($black-color-top, $black-color-bottom);
+       @include icon-gradient($new-purple, $purple-color-bottom);
        z-index: 3;
        opacity: 1;
     }
@@ -204,6 +227,9 @@ body > .navbar-collapse{
         opacity: .77;
     }
 
+    &[data-color="black"]:after{
+        @include icon-gradient($default-states-color, $default-states-color);
+    }
     &[data-color="blue"]:after{
         @include icon-gradient($new-dark-blue, $blue-color-bottom);
     }
@@ -228,7 +254,6 @@ body > .navbar-collapse{
 .main-panel{
     background: rgba(203,203,210,.15);
     position: relative;
-    z-index: 2;
     float: right;
     width: $sidebar-width;
     min-height: 100%;
@@ -259,4 +284,98 @@ body > .navbar-collapse{
     -webkit-transition-timing-function: linear,linear;
     transition-timing-function: linear,linear;
     -webkit-overflow-scrolling: touch;
+}
+
+
+.fixed-plugin{
+
+    .dropdown{
+        .dropdown-menu{
+            border-radius: 10px;
+            li.adjustments-line{
+                border-bottom: 1px solid #ddd;
+            }
+            li{
+                padding: 5px 2px !important;
+            }
+            .button-container{
+                a{
+                    font-size: 14px;
+                }
+
+            }
+        }
+    }
+
+}
+.modal{
+    &.show{
+        .modal-dialog{
+            -webkit-transform: translate(0, 30%);
+            -o-transform: translate(0, 30%);
+            transform: translate(0, 30%); 
+        }
+    }
+    &.modal-mini{
+        .modal-dialog{
+            max-width: 255px;
+            margin: 0 auto;
+        }
+    }
+    .modal-content{
+        .modal-header{
+            border-bottom: none;
+            padding-top: 24px;
+            padding-right: 24px;
+            padding-bottom: 0;
+            padding-left: 24px;
+
+            .modal-profile{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 5.7;
+                box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
+
+                i{
+                    font-size: 32px;
+                    padding-top: 24px;
+                }
+            }
+        }
+
+        .modal-body{
+            padding-top: 24px;
+            padding-right: 24px;
+            padding-bottom: 16px;
+            padding-left: 24px;
+            line-height: 1.9;
+        }
+
+        .modal-body + .modal-footer{
+            padding-top: 0;
+        }
+
+        .modal-footer{
+            border-top: none;
+            padding-right: 24px;
+            padding-bottom: 16px;
+            padding-left: 24px;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+
+            .btn{
+                margin: 0;
+                padding-left: 16px;
+                padding-right: 16px;
+                width: auto;
+
+                &:hover,
+                &focus{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }

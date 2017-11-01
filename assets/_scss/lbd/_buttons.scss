@@ -2,16 +2,17 @@
     border-width: $border-thick;
     background-color: $transparent-bg;
     font-weight: $font-weight-normal;
-    
+
     @include opacity(.8);
     padding: $padding-base-vertical $padding-base-horizontal;
-    
+
     @include btn-styles($default-color, $default-states-color);
-    
+
     &:hover,
     &:focus{
         @include opacity(1);
         outline: 0 !important;
+        box-shadow: none;
     }
     &:active,
     &.active,
@@ -19,11 +20,11 @@
          @include box-shadow(none);
          outline: 0 !important;
     }
-    
+
     &.btn-icon{
         padding: $padding-base-vertical;
     }
-    
+
 }
 
 // Apply the mixin to the buttons
@@ -33,22 +34,22 @@
 .btn-info    { @include btn-styles($info-color, $info-states-color); }
 .btn-warning { @include btn-styles($warning-color, $warning-states-color); }
 .btn-danger  { @include btn-styles($danger-color, $danger-states-color); }
-.btn-neutral { 
+.btn-neutral {
     @include btn-styles($white-color, $white-color);
-    
+
     &:active,
     &.active,
     .open > &.dropdown-toggle{
          background-color: $white-color;
          color: $default-color;
-    }    
-    
+    }
+
     &.btn-fill,
     &.btn-fill:hover,
     &.btn-fill:focus{
         color: $default-color;
     }
-    
+
     &.btn-simple:active,
     &.btn-simple.active{
         background-color: transparent;
@@ -66,7 +67,7 @@
     border-width: $border-thin;
     border-radius: $btn-round-radius !important;
     padding: $padding-round-vertical $padding-round-horizontal;
-    
+
     &.btn-icon{
         padding: $padding-round-vertical;
     }
@@ -75,7 +76,7 @@
     border: $none;
     font-size: $font-size-medium;
     padding: $padding-base-vertical $padding-base-horizontal;
-    
+
     &.btn-icon{
         padding: $padding-base-vertical;
     }
@@ -85,7 +86,7 @@
    font-weight: $font-weight-normal;
 }
 .btn-sm{
-    @include btn-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);    
+    @include btn-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);
 }
 .btn-xs {
     @include btn-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $border-radius-small);
@@ -105,4 +106,27 @@
     top: 50%;
     margin-top: -1px;
     right: 8px;
+}
+.btn-social{
+    opacity: 0.85;
+}
+
+.btn-twitter{
+    border-color: $social-twitter;
+    color: $social-twitter;
+    &:hover{
+        opacity: 1 !important;
+        border-color: $social-twitter;
+        color: $social-twitter;
+    }
+}
+.btn-facebook{
+    border-color: $social-facebook;
+    color: $social-facebook;
+
+    &:hover{
+        opacity: 1 !important;
+        border-color: $social-facebook;
+        color: $social-facebook;
+    }
 }

@@ -34,7 +34,7 @@
 
     <body>
         <div class="wrapper">
-            <div class="sidebar" data-image="../assets/img/blurred-image-1.jpg">
+            <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
     <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
@@ -52,45 +52,52 @@
         <ul class="nav">
             <li >
                 <a class="nav-link" href="dashboard.html">
-                    <i class="now-ui-icons design_app"></i>
+                    <i class="nc-icon nc-chart-pie-35"></i>
                     Dashboard
                 </a>
             </li>
             <li >
                 <a class="nav-link" href="./user.html">
-                    <i class="now-ui-icons users_single-02"></i>
+                    <i class="nc-icon nc-circle-09"></i>
                     User Profile
                 </a>
             </li>
             <li  class="nav-item active" >
                 <a class="nav-link" href="./table.html">
-                    <i class="now-ui-icons text_align-center"></i>
+                    <i class="nc-icon nc-notes"></i>
                     Table List
                 </a>
             </li>
             <li >
                 <a class="nav-link" href="./typography.html">
-                    <i class="now-ui-icons files_paper"></i>
+                    <i class="nc-icon nc-paper-2"></i>
                     Typography
                 </a>
             </li>
             <li >
                 <a class="nav-link" href="./icons.html">
-                    <i class="now-ui-icons objects_diamond"></i>
+                    <i class="nc-icon nc-atom"></i>
                     Icons
                 </a>
             </li>
             <li >
                 <a class="nav-link" href="./maps.html">
-                    <i class="now-ui-icons location_pin"></i>
+                    <i class="nc-icon nc-pin-3"></i>
                     Maps
                 </a>
             </li>
             <li >
                 <a class="nav-link" href="./notifications.html">
-                    <i class="now-ui-icons ui-1_bell-53"></i>
+                    <i class="nc-icon nc-bell-55"></i>
                     Notifications
                 </a>
+            </li>
+
+            <li class="nav-item active active-pro">
+                    <a class="nav-link active" href="/light-bootstrap-dashboard/upgrade">
+                        <i class="nc-icon nc-alien-33"></i>
+                        <p>Upgrade to PRO</p>
+                    </a>
             </li>
         </ul>
         
@@ -198,8 +205,8 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="title">Striped Table with Hover</h5>
-                <p class="category">Here is a subtitle for this table</p>
+                <h4 class="card-title">Striped Table with Hover</h4>
+                <p class="card-category">Here is a subtitle for this table</p>
             </div>
             <div class="card-block table-responsive table-full-width">
                 <table class="table table-hover table-striped">
@@ -262,8 +269,8 @@
     <div class="col-md-12">
         <div class="card card-plain">
             <div class="card-header">
-                <h5 class="title">Table on Plain Background</h5>
-                <p class="category">Here is a subtitle for this table</p>
+                <h4 class="card-title">Table on Plain Background</h4>
+                <p class="card-category">Here is a subtitle for this table</p>
             </div>
             <div class="card-block table-responsive table-full-width">
                 <table class="table table-hover">
@@ -330,35 +337,36 @@
 
                  
 
-                <footer class="footer" >
-    <div class="container">
-        <nav >
-            <ul class="mr-auto">
+                <footer class="footer">
+    <div class="container-fluid">
+        <nav>
+            <ul class="pull-left">
                 <li>
-                    <a href="https://www.creative-tim.com">
-                        Creative Tim
+                    <a href="#">
+                        Home
                     </a>
                 </li>
                 <li>
-                    <a href="http://presentation.creative-tim.com">
-                       About Us
+                    <a href="#">
+                        Company
                     </a>
                 </li>
                 <li>
-                    <a href="http://blog.creative-tim.com">
+                    <a href="#">
+                        Portfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
                        Blog
                     </a>
                 </li>
-                <li>
-                    <a href="https://github.com/creativetimofficial/now-ui-dashboard/blob/master/LICENSE.md">
-                        MIT License
-                    </a>
-                </li>
             </ul>
+
+            <p class="copyright pull-right">
+                © <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+            </p>
         </nav>
-        <div class="copyright ml-auto">
-            &copy; <script>document.write(new Date().getFullYear())</script>, Designed by <a href="http://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-        </div>
     </div>
 </footer>
 
@@ -368,44 +376,39 @@
         <!-- <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
         <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
+            <i class="fa fa-cog fa-2x"> </i>
         </a>
+
         <ul class="dropdown-menu">
-			<li class="header-title"> Sidebar Background</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <div class="badge-colors text-center">
-						<span class="badge filter badge-yellow" data-color="yellow"></span>
-                        <span class="badge filter badge-blue" data-color="blue"></span>
-                        <span class="badge filter badge-green" data-color="green"></span>
-                        <span class="badge filter badge-orange active" data-color="orange"></span>
-                        <span class="badge filter badge-red" data-color="red"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
+			<li class="header-title"> Sidebar Style</li>
             <li class="adjustments-line">
                 <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Image</p>
-                    <div class="togglebutton switch-sidebar-image">
-                        <input type="checkbox" name="checkbox" class="bootstrap-switch"
-                          data-on-label="ON"
-                          data-off-label="OFF"
-                          />
+                    <p>Background Image</p>
+                    <label>
+                        <input type="checkbox" data-toggle="switch" checked="" data-on-color="primary" data-off-color="primary"><span class="toggle"></span>
+                    </label>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger background-color">
+                    <p>Filters</p>
+                    <div class="pull-right">
+                        <span class="badge filter badge-black" data-color="black"></span>
+                        <span class="badge filter badge-azure" data-color="azure"></span>
+                        <span class="badge filter badge-green" data-color="green"></span>
+                        <span class="badge filter badge-orange" data-color="orange"></span>
+                        <span class="badge filter badge-red" data-color="red"></span>
+                        <span class="badge filter badge-purple active" data-color="purple"></span>
                     </div>
                     <div class="clearfix"></div>
                 </a>
             </li>
+            <li class="header-title">Sidebar Images</li>
 
-            <li class="header-title">Images</li>
             <li class="active">
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/bg7.jpg" alt="" />
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/blurred-image-1.jpg" alt="" />
+                    <img src="../assets/img/sidebar-1.jpg" alt="" />
                 </a>
             </li>
             <li>
@@ -418,11 +421,31 @@
                     <img src="../assets/img/sidebar-4.jpg" alt="" />
                 </a>
             </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../assets/img/sidebar-5.jpg" alt="" />
+                </a>
+            </li>
 
             <li class="button-container">
                 <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block btn-round">Get Free Demo</a>
+                    <a href="http://www.creative-tim.com/product/light-bootstrap-dashboard" target="_blank" class="btn btn-info btn-block btn-fill">Download, it's free!</a>
                 </div>
+            </li>
+
+            <li class="header-title pro-title text-center">Want more components?</li>
+
+            <li class="button-container">
+                <div class="">
+                    <a href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro" target="_blank" class="btn btn-warning btn-block btn-fill">Get The PRO Version!</a>
+                </div>
+            </li>
+
+            <li class="header-title" id="sharrreTitle">Thank you for sharing!</li>
+
+            <li class="button-container">
+				<button id="twitter" class="btn btn-social btn-twitter btn-round sharrre"><i class="fa fa-twitter"></i> · 256</button>
+                <button id="facebook" class="btn btn-social btn-facebook btn-round sharrre"><i class="fa fa-facebook-square"> · 426</i></button>
             </li>
         </ul>
     </div>
