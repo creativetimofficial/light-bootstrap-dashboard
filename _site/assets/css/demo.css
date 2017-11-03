@@ -30,9 +30,7 @@
 .tim-row h3{
     margin-top: 0;
 }
-.switch{
-    margin-right: 20px;
-}
+
 #navbar-full .navbar{
     border-radius: 0 !important;
     margin-bottom: 15px;
@@ -54,7 +52,7 @@
 
 .fixed-plugin{
     position: fixed;
-    top: 180px;
+    top: 200px;
     right: 0;
     width: 64px;
     background: rgba(0,0,0,.3);
@@ -314,7 +312,7 @@
     right: -15px;
 }
 
-/*.wrapper-full-page ~ .fixed-plugin .dropdown.open .dropdown-menu{
+.wrapper-full-page ~ .fixed-plugin .dropdown.open .dropdown-menu{
     -webkit-transform: translateY(-17%);
     -moz-transform: translateY(-17%);
     -o-transform: translateY(-17%);
@@ -328,11 +326,8 @@
     -o-transform: translateY(-19%);
     -ms-transform: translateY(-19%);
     transform: translateY(-19%);
-}*/
-
-.fixed-plugin{
-    top: 120px;
 }
+
 
 
 .places-buttons .btn {

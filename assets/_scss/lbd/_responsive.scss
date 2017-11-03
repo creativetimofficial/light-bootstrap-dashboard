@@ -15,6 +15,15 @@
 
     }
 
+    .footer{
+        height: 60px;
+        .footer-menu{
+            float: left;
+        }
+        .copyright{
+            float: right;
+        }
+    }
     .navbar-nav .nav-item .dropdown-menu:before{
         border-bottom: 11px solid rgba(0, 0, 0, 0.2);
         border-left: 11px solid rgba(0, 0, 0, 0);
@@ -54,10 +63,6 @@
         }
     }
 
-    body > .navbar-collapse.collapse{
-        display: none !important;
-    }
-
     .card{
         form{
             [class*="col-"]{
@@ -76,12 +81,88 @@
 /*          Changes for small display      */
 
 @media (max-width: 991px){
+
     .sidebar{
-        display: none;
+        right: 0 !important;
+        left: auto;
+        position: absolute;
+        @include transform-translate-3d(262px);
+        @include transition (0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+    }
+
+    .nav-open{
+        .main-panel{
+            position: absolute;
+            left: 0;
+            @include transform-translate-3d(-250px);
+            @include transition (0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+        }
+
+        .sidebar{
+            @include transform-translate-3d(10px);
+            @include transition (0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+        }
     }
 
     .main-panel{
+        @include transform-translate-3d(0px);
+        @include transition (0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+    }
+
+
+    .nav-item.active-pro{
+        position: relative !important;
+    }
+
+    .nav-mobile-menu{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        padding-top: 5px;
+
+        .dropdown{
+            .dropdown-menu{
+                position: static;
+                float: none;
+                width: auto;
+                color: $white-color;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                        @include transition (0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+
+                .dropdown-item{
+                    margin: 5px 15px 0px 40px;
+                    border-radius: 4px;
+                    color: $white-color;
+                    opacity: .86;
+                    padding: 8px 50px;
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.23)
+                    }
+                }
+            }
+
+        }
+        .nav-item{
+            .nav-link{
+                span{
+                    display: inline-block !important;
+                }
+                .no-icon{
+                    padding-left: 50px;
+                }
+            }
+        }
+    }
+    .main-panel{
         width: 100%;
+    }
+
+    .navbar-brand{
+        padding: 15px 15px;
     }
     .navbar-transparent{
         padding-top: 15px;
@@ -91,21 +172,14 @@
          position: relative;
     }
     .wrapper{
-       @include transform-translate-x(0px);
-       @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
        left: 0;
        background-color: white;
     }
     .navbar .container{
-         left: 0;
-          width: 100%;
-         @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
-         position: relative;
-    }
-    .navbar .navbar-collapse.collapse,
-    .navbar .navbar-collapse.collapse.in,
-    .navbar .navbar-collapse.collapsing{
-        display: none !important;
+        left: 15px;
+        width: 100%;
+        position: relative;
+        top: -10px;
     }
 
     .navbar-nav{
@@ -319,12 +393,6 @@
         margin: $margin-bottom;
     }
     .social-line.pull-right{
-        float: none;
-    }
-    .footer nav.pull-left{
-        float: none !important;
-    }
-    .footer:not(.footer-big) nav > ul li{
         float: none;
     }
     .social-area.pull-right{

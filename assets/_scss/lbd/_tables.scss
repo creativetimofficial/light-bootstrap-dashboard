@@ -33,6 +33,7 @@
         padding-bottom: 5px;
         border-top: none !important;
         border-bottom: none;
+        text-align: left !important;
     }
 
    .td-actions .btn{
@@ -55,6 +56,9 @@
                 @include opacity(1);
             }
         }
+    }
+    > tbody > tr > td{
+        width: 100%;
     }
 
     .btn:focus{

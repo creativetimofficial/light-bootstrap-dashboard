@@ -5,60 +5,61 @@
         Tip 2: you can also add an image using data-image tag
     -->
 
-    <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text">
-            Creative Tim
-        </a>
-    </div>
-
     <div class="sidebar-wrapper">
         {% if page.brand != "template-page" %}
+
+        <div class="logo">
+            <a href="http://www.creative-tim.com" class="simple-text">
+                Creative Tim
+            </a>
+        </div>
+
         <ul class="nav">
             <li {% if page.brand == "Dashboard" %} class="nav-item active" {% endif %}>
                 <a class="nav-link" href="dashboard.html">
                     <i class="nc-icon nc-chart-pie-35"></i>
-                    Dashboard
+                    <p>Dashboard</p>
                 </a>
             </li>
             <li {% if page.brand == "User" %} class="nav-item active" {% endif %}>
                 <a class="nav-link" href="{{ path-pages }}/user.html">
                     <i class="nc-icon nc-circle-09"></i>
-                    User Profile
+                    <p>User Profile</p>
                 </a>
             </li>
             <li {% if page.brand == "Table List" %} class="nav-item active" {% endif %}>
                 <a class="nav-link" href="{{ path-pages }}/table.html">
                     <i class="nc-icon nc-notes"></i>
-                    Table List
+                    <p>Table List</p>
                 </a>
             </li>
             <li {% if page.brand == "Typography" %} class="nav-item active" {% endif %}>
                 <a class="nav-link" href="{{ path-pages }}/typography.html">
                     <i class="nc-icon nc-paper-2"></i>
-                    Typography
+                    <p>Typography</p>
                 </a>
             </li>
             <li {% if page.brand == "Icons" %} class="nav-item active" {% endif %}>
                 <a class="nav-link" href="{{ path-pages }}/icons.html">
                     <i class="nc-icon nc-atom"></i>
-                    Icons
+                    <p>Icons</p>
                 </a>
             </li>
             <li {% if page.brand == "Maps" %} class="nav-item active" {% endif %}>
                 <a class="nav-link" href="{{ path-pages }}/maps.html">
                     <i class="nc-icon nc-pin-3"></i>
-                    Maps
+                    <p>Maps</p>
                 </a>
             </li>
             <li {% if page.brand == "Notifications" %} class="nav-item active" {% endif %}>
                 <a class="nav-link" href="{{ path-pages }}/notifications.html">
                     <i class="nc-icon nc-bell-55"></i>
-                    Notifications
+                    <p>Notifications</p>
                 </a>
             </li>
 
             <li class="nav-item active active-pro">
-                    <a class="nav-link active" href="/light-bootstrap-dashboard/upgrade">
+                    <a class="nav-link active" href="../examples/upgrade">
                         <i class="nc-icon nc-alien-33"></i>
                         <p>Upgrade to PRO</p>
                     </a>

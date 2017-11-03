@@ -1,13 +1,16 @@
-.footer{    
+.footer{
     background-color: $white-color;
-    line-height: $line-height;
-    
+
+    .footer-menu{
+        height: 41px;
+    }
+
     nav > ul{
         list-style: none;
         margin: 0;
         padding: 0;
         font-weight: normal;
-        
+
         a:not(.btn){
             color: $dark-gray;
             display: block;
@@ -70,8 +73,3 @@
         }
     }
 }
-
-
-
-
-

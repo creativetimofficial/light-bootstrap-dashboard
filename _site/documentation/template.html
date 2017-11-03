@@ -26,6 +26,7 @@
 
 <!-- CSS Just for demo purpose, don't include it in your project -->
 <link href="../assets/css/demo.css" rel="stylesheet" />
+<link href="../assets/css/animate.min.css" rel="stylesheet" />
 
 
 
@@ -40,12 +41,6 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-
-    <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text">
-            Creative Tim
-        </a>
-    </div>
 
     <div class="sidebar-wrapper">
         
@@ -72,45 +67,38 @@
 
             <div class="main-panel">
                 <!-- Navbar -->
-<nav class="navbar navbar-toggleable-md navbar-default">
+<nav class="navbar navbar-toggleable-lg" color-on-scroll="500">
 	<div class="container">
-		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-bar navbar-kebab"></span>
-			<span class="navbar-toggler-bar navbar-kebab"></span>
-			<span class="navbar-toggler-bar navbar-kebab"></span>
-		</button>
 
 		
-		<div class="navbar-minimize">
-			<!-- <button type="button" class="btn btn-neutral btn-icon btn-icon-mini btn-round" id="sidebar-collapse">
-				<i class="now-ui-icons gestures_tap-01"></i>
-			</button> -->
-			<button type="button" class="navbar-toggler">
-				<span class="navbar-toggler-bar bar1"></span>
-				<span class="navbar-toggler-bar bar2"></span>
-				<span class="navbar-toggler-bar bar3"></span>
-			</button>
-		</div>
 
 		<a class="navbar-brand" href="#pablo"> template-page </a>
 
 		
-		<!-- <div class="justify-content-end">
 
-		</div> -->
+		<button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"  aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-bar burger-lines"></span>
+			<span class="navbar-toggler-bar burger-lines"></span>
+			<span class="navbar-toggler-bar burger-lines"></span>
+		</button>
 
 	    <div class="collapse navbar-collapse justify-content-end" id="navigation">
 			
 			<ul class="nav navbar-nav mr-auto">
                 <li class="nav-item">
                     <a href="#" class="nav-link" data-toggle="dropdown">
-                        <i class="fa fa-dashboard"></i>
+                        <i class="fa fa-dashboard hidden-sm-down"></i>
+						<i class="nc-icon nc-palette hidden-lg-up"></i>
+
+						<span class="d-lg-none">Dashboard</span>
                     </a>
                 </li>
                 <li class="dropdown nav-item">
                       <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                            <i class="fa fa-globe"></i>
+                            <i class="fa fa-globe hidden-sm-down"></i>
+							<i class="nc-icon nc-planet hidden-lg-up"></i>
                             <span class="notification">5</span>
+							<span class="d-lg-none">Notification</span>
                       </a>
                       <ul class="dropdown-menu">
                         <a class="dropdown-item" href="#">Notification 1</a>
@@ -121,21 +109,22 @@
                       </ul>
                 </li>
                 <li class="nav-item">
-                   <a href="" class="nav-link">
-                        <i class="fa fa-search"></i>
+                   <a href="#" class="nav-link">
+                        <i class="fa fa-search hidden-sm-down"></i>
+						<i class="nc-icon nc-zoom-split hidden-lg-up"></i>
+						<span class="d-lg-none">Search</span>
                     </a>
                 </li>
             </ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
 					<a class="nav-link" href="#pablo">
-						Account
+						<span class="no-icon">Account</span>
 					</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-							Dropdown
+						<span class="no-icon">Dropdown</span>
 
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -150,7 +139,7 @@
 
 				<li class="nav-item">
 					<a class="nav-link" href="#pablo">
-					   Log out
+					   <span class="no-icon">Log out</span>
 					</a>
 				</li>
 			</ul>
@@ -178,7 +167,7 @@
                 <footer class="footer">
     <div class="container-fluid">
         <nav>
-            <ul class="pull-left">
+            <ul class="footer-menu">
                 <li>
                     <a href="#">
                         Home
@@ -201,7 +190,7 @@
                 </li>
             </ul>
 
-            <p class="copyright pull-right">
+            <p class="copyright text-center">
                 © <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
             </p>
         </nav>
@@ -222,7 +211,7 @@
             <li class="adjustments-line">
                 <a href="javascript:void(0)" class="switch-trigger">
                     <p>Background Image</p>
-                    <label>
+                    <label class="switch">
                         <input type="checkbox" data-toggle="switch" checked="" data-on-color="primary" data-off-color="primary"><span class="toggle"></span>
                     </label>
                     <div class="clearfix"></div>
@@ -256,7 +245,7 @@
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/sidebar-4.jpg" alt="" />
+                    <img src="..//assets/img/sidebar-4.jpg" alt="" />
                 </a>
             </li>
             <li>

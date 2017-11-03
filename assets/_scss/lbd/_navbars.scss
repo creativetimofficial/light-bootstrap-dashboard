@@ -5,26 +5,63 @@
             background-color: transparent;
         }
     }
+
 }
 .navbar{
     border: $none;
     font-size: $font-size-navbar;
     border-radius: 0;
     min-height: 50px;
-    max-height: 60px;
+    max-height: 61px;
+    background-color: $white-navbar;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     .navbar-brand {
-        font-weight: $font-weight-normal;
-        margin: $navbar-margin-brand;
-        padding: 15px 15px 15px 0;
-        font-size: $font-size-large-navbar;
+        font-weight: 400;
+        margin: 5px 0px;
+        font-size: 20px;
         color: $default-color;
-        margin-left: -15px;
 
         &:hover{
             color: #5e5e5e;
         }
     }
+    .navbar-toggler{
+        width: 37px;
+        height: 27px;
+        vertical-align: middle;
+        outline: 0;
+        cursor: pointer;
+
+        &.navbar-toggler-left{
+            position: relative;
+            left: 0;
+            padding-left: 0;
+        }
+
+        &.navbar-toggler-right{
+            padding-right: 0;
+            top: 18px;
+        }
+
+        & .navbar-toggler-bar{
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+        .burger-lines{
+            display: block;
+            position: relative;
+            background-color: #888;
+            width: 24px;
+            height: 2px;
+            border-radius: 1px;
+            margin: 4px auto;
+        }
+    }
+
+
     .navbar-nav{
         .nav-item{
             .nav-link{
@@ -199,10 +236,6 @@
     }
 }
 
-// .nav-open .nav .caret{
-//     border-bottom-color: $white-color;
-//     border-top-color: $white-color;
-// }
 
 .navbar-default {
     background-color: $white-navbar;

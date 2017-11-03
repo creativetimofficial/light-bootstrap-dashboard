@@ -81,13 +81,37 @@ body > .navbar-collapse{
         float: none;
         display: block;
 
-        .nav-item{
+        li{
             .nav-link{
                 color: $white-color;
                 margin: 5px 15px;
                 opacity: .86;
                 border-radius: 4px;
                 display: block;
+                padding: 10px 15px;
+
+                &:hover{
+                    background: rgba(255, 255, 255, 0.13);
+                    opacity: 1;
+                }
+
+                p{
+                    margin: 0;
+                    line-height: 31px;
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    display: inline-flex;
+                }
+
+                i{
+                    font-size: 28px;
+                    margin-right: 15px;
+                    width: 30px;
+                    text-align: center;
+                    vertical-align: middle;
+                    float: left;
+                }
             }
 
             &:hover .nav-link{
@@ -110,25 +134,10 @@ body > .navbar-collapse{
                     margin-top: 31px;
                 }
             }
+
         }
 
-        p{
-            margin: 0;
-            line-height: 30px;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-left: 45px;
-        }
 
-        i{
-            font-size: 28px;
-            float: left;
-            margin-right: 15px;
-            line-height: 30px;
-            width: 30px;
-            text-align: center;
-        }
 
         .caret{
             margin-top: 13px;
@@ -137,8 +146,9 @@ body > .navbar-collapse{
         }
 
         .active-pro{
+            position: absolute;
             width: 100%;
-            bottom: 70px;
+            bottom: 10px;
 
             a{
                 color: $white-color !important;
@@ -151,7 +161,6 @@ body > .navbar-collapse{
             margin: 5px 15px;
             opacity: .86;
             border-radius: 4px;
-            padding: 10px 15px;
             text-transform: uppercase;
             line-height: 30px;
             font-size: 12px;
@@ -313,7 +322,7 @@ body > .navbar-collapse{
         .modal-dialog{
             -webkit-transform: translate(0, 30%);
             -o-transform: translate(0, 30%);
-            transform: translate(0, 30%); 
+            transform: translate(0, 30%);
         }
     }
     &.modal-mini{

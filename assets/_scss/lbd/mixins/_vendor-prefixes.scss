@@ -45,6 +45,14 @@
         transform: translate3d($value, 0, 0);
 }
 
+@mixin transform-translate-3d($value){
+    -webkit-transform: translate3d($value, 0, 0);
+    -moz-transform: translate3d($value, 0, 0);
+    -o-transform: translate3d($value, 0, 0);
+    -ms-transform: translate3d($value, 0, 0);
+    transform: translate3d($value, 0, 0);
+}
+
 @mixin transform-origin($coordinates){
       -webkit-transform-origin: $coordinates;
         -moz-transform-origin: $coordinates;
@@ -127,14 +135,14 @@
       75% { transform: rotate(5deg); }
       100% { top: 0px; transform: rotate(0); }
     }
-    
+
     @-webkit-keyframes topbar-back {
       0% { top: 6px; -webkit-transform: rotate(135deg); }
       45% { -webkit-transform: rotate(-10deg); }
       75% { -webkit-transform: rotate(5deg); }
       100% { top: 0px; -webkit-transform: rotate(0); }
     }
-    
+
     @-moz-keyframes topbar-back {
       0% { top: 6px; -moz-transform: rotate(135deg); }
       45% { -moz-transform: rotate(-10deg); }
@@ -185,5 +193,3 @@
     }
 
 }
-
-
