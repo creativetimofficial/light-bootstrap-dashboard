@@ -1,4 +1,5 @@
 # [Light Bootstrap Dashboard](http://www.creative-tim.com/product/light-bootstrap-dashboard)
+[![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
 
 ![alt text](http://s3.amazonaws.com/creativetim_bucket/products/32/original/opt_lbd_thumbnail.jpg "Light Bootstrap Dashboard")
 
@@ -36,29 +37,12 @@ Within the download you'll find the following directories and files:
 x_lbd_free/
 ├── assets/
 |   ├── css/
-|   |   ├── animate.min.css
-|   |   ├── bootstrap.min.css
-|   |   ├── demo.css
-│   |   ├── light-bootstrap-dashboard.css
-│   |   └── pe-icon-7-stroke.css
 |   ├── js/
-|   |   ├── bootstrap-checkbox-radio-switch.js
-|   |   ├── bootstrap-notify.js
-|   |   ├── bootstrap-select.js
-|   |   ├── bootstrap.min.js
-│   |   ├── chartist.min.js
-│   |   ├── demo.js
-│   |   ├── jquery-1.10.2.js
-│   |   └── light-bootstrap-dashboard.js
 |   ├── fonts/
-|   |    ├── Pe-icon-7-stroke.eot
-|   |    ├── Pe-icon-7-stroke.svg
-|   |    ├── Pe-icon-7-stroke.ttf
-|   |    └── Pe-icon-7-stroke.woff
 |   └── img/
-|
-├── Creative Tim License.pdf
 ├── dashboard.html
+├── CHANGELOG.md
+├── documentation
 ├── icons.html
 ├── maps.html
 ├── notifications.html
@@ -69,27 +53,6 @@ x_lbd_free/
 └── user.html
 
 ```
-
-### Version logs
-
-V1.0 - 20 August 2015 initial release
-
-V1.1 - 08 September 2015 - bug fixing [current version]
-- added company name/logo inside the sidebar for small screens
-- fixed bug for notification with close button on small screens
-- fix live preview bug for download on small screens
-- fix table responsive for small screens
-- added new labels for chartist on small screens
-
-V1.2 - 17 January 2016 - New Page
-- for those who want to upsell inside their dashboard we added a new page "Upgrade to PRO" with a pricing and options table
-
-V1.3 - 22 January 2016 - New Template page + Video Tutorial 
-- added the default template page + youtube video tutorial on how to create an Admin Template (link coming soon)
-
-V1.3.1 - 19 January 2017 [current version]
-- switched to MIT license
-
 ### License
 
 - Copyright 2017 Creative Tim (http://www.creative-tim.com)
@@ -116,3 +79,8 @@ Dribbble: <https://dribbble.com/creativetim>
 Google+: <https://plus.google.com/+CreativetimPage>
 
 Instagram: <https://instagram.com/creativetimofficial>
+
+
+[CHANGELOG]: ./CHANGELOG.md
+[version-badge]: https://img.shields.io/badge/version-1.4.0-blue.svg
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
