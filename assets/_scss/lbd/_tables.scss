@@ -57,11 +57,17 @@
             }
         }
     }
-    > tbody > tr > td{
-        width: 100%;
-    }
 
     .btn:focus{
         box-shadow: none !important;
+    }
+}
+.table-upgrade{
+    .table{
+        tr{
+            td{
+                width: 100%
+            }
+        }
     }
 }

@@ -957,10 +957,11 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
 .table > tbody > tr:hover .td-actions .btn {
   opacity: 1;
   filter: alpha(opacity=100); }
-.table > tbody > tr > td {
-  width: 100%; }
 .table .btn:focus {
   box-shadow: none !important; }
+
+.table-upgrade .table tr td {
+  width: 100%; }
 
 .from-check, .form-check-radio {
   margin-bottom: 12px;
@@ -1563,6 +1564,22 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   position: relative; }
 .card .alert.alert-with-icon {
   padding-left: 65px; }
+
+.card-stats .card-body {
+  padding: 15px 15px 0px; }
+.card-stats .card-body .numbers {
+  font-size: 1.8rem;
+  text-align: right; }
+.card-stats .card-body .numbers p {
+  margin-bottom: 0; }
+.card-stats .card-footer {
+  padding: 0px 15px 10px 15px; }
+.card-stats .icon-big {
+  font-size: 3em;
+  min-height: 64px; }
+.card-stats .icon-big i {
+  font-weight: 700;
+  line-height: 59px; }
 
 .card-user .card-image {
   height: 110px; }
