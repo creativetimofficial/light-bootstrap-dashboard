@@ -18,7 +18,7 @@
     <link href="assets/css/animate.min.css" rel="stylesheet"/>
 
     <!--  Light Bootstrap Table core CSS    -->
-    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
 
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
@@ -126,8 +126,7 @@
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-globe"></i>
-                                    <b class="caret hidden-sm hidden-xs"></b>
-                                    <span class="notification hidden-sm hidden-xs">5</span>
+                                    <b class="caret hidden-lg hidden-md"></b>
 									<p class="hidden-lg hidden-md">
 										5 Notifications
 										<b class="caret"></b>
@@ -161,6 +160,7 @@
 										Dropdown
 										<b class="caret"></b>
 									</p>
+
                               </a>
                               <ul class="dropdown-menu">
                                 <li><a href="#">Action</a></li>
@@ -177,7 +177,7 @@
                                 <p>Log out</p>
                             </a>
                         </li>
-						<li class="separator hidden-lg hidden-md"></li>
+						<li class="separator hidden-lg"></li>
                     </ul>
                 </div>
             </div>
@@ -189,6 +189,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card">
+
                             <div class="header">
                                 <h4 class="title">Email Statistics</h4>
                                 <p class="category">Last Campaign Performance</p>
@@ -273,9 +274,10 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" value="" data-toggle="checkbox">
-                                                    </label>
+													<div class="checkbox">
+						  							  	<input id="checkbox1" type="checkbox">
+						  							  	<label for="checkbox1"></label>
+					  						  		</div>
                                                 </td>
                                                 <td>Sign contract for "What are conference organizers afraid of?"</td>
                                                 <td class="td-actions text-right">
@@ -289,9 +291,10 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" value="" data-toggle="checkbox" checked="">
-                                                    </label>
+													<div class="checkbox">
+						  							  	<input id="checkbox2" type="checkbox" checked>
+						  							  	<label for="checkbox2"></label>
+					  						  		</div>
                                                 </td>
                                                 <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
                                                 <td class="td-actions text-right">
@@ -305,12 +308,13 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" value="" data-toggle="checkbox" checked="">
-                                                    </label>
+													<div class="checkbox">
+						  							  	<input id="checkbox3" type="checkbox">
+						  							  	<label for="checkbox3"></label>
+					  						  		</div>
                                                 </td>
                                                 <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-</td>
+												</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -322,9 +326,10 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" value="" data-toggle="checkbox">
-                                                    </label>
+													<div class="checkbox">
+						  							  	<input id="checkbox4" type="checkbox" checked>
+						  							  	<label for="checkbox4"></label>
+					  						  		</div>
                                                 </td>
                                                 <td>Create 4 Invisible User Experiences you Never Knew About</td>
                                                 <td class="td-actions text-right">
@@ -338,9 +343,10 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" value="" data-toggle="checkbox">
-                                                    </label>
+													<div class="checkbox">
+						  							  	<input id="checkbox5" type="checkbox">
+						  							  	<label for="checkbox5"></label>
+					  						  		</div>
                                                 </td>
                                                 <td>Read "Following makes Medium better"</td>
                                                 <td class="td-actions text-right">
@@ -354,9 +360,10 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" value="" data-toggle="checkbox">
-                                                    </label>
+													<div class="checkbox">
+						  							  	<input id="checkbox6" type="checkbox" checked>
+						  							  	<label for="checkbox6"></label>
+					  						  		</div>
                                                 </td>
                                                 <td>Unfollow 5 enemies from twitter</td>
                                                 <td class="td-actions text-right">
@@ -425,11 +432,8 @@
 </body>
 
     <!--   Core JS Files   -->
-    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-	<!--  Checkbox, Radio & Switch Plugins -->
-	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
 	<!--  Charts Plugin -->
 	<script src="assets/js/chartist.min.js"></script>
@@ -438,10 +442,10 @@
     <script src="assets/js/bootstrap-notify.js"></script>
 
     <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="assets/js/light-bootstrap-dashboard.js"></script>
+	<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>

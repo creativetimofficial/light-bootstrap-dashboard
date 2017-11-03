@@ -4,16 +4,21 @@ body,
     min-height: 100vh;
     position: relative;
 }
+
+body{
+    background: rgba(203,203,210,.15);
+}
+
 a{
   color: $info-color;
-    
+
   &:hover, &:focus{
-     color: $info-states-color; 
-     text-decoration: none; 
+     color: $info-states-color;
+     text-decoration: none;
   }
 }
 
-a:focus, a:active, 
+a:focus, a:active,
 button::-moz-focus-inner,
 input::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -30,8 +35,8 @@ input:focus {
 }
 
 /*           Animations              */
-.form-control, 
-.input-group-addon, 
+.form-control,
+.input-group-addon,
 .tagsinput,
 .navbar,
 .navbar .alert{
@@ -59,4 +64,3 @@ input:focus {
     top: 0;
     height: 100vh;
 }
-
