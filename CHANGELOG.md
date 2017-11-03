@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.4.0] 2017-11-02
+## [1.4.0] 2017-11-03
 ### Library Updates
 - jQuery - `3.2.1`
 - bootstrap - `3.3.7`
