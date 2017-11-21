@@ -122,7 +122,7 @@
 
         .dropdown{
             .dropdown-menu{
-                position: static;
+                position: static !important;
                 float: none;
                 width: auto;
                 color: $white-color;
@@ -131,7 +131,7 @@
                 border: 0;
                 -webkit-box-shadow: none;
                 box-shadow: none;
-                        @include transition (0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+                @include transition (0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
                 .dropdown-item{
                     margin: 5px 15px 0px 40px;
