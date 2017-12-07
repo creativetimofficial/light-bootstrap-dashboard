@@ -1,7 +1,7 @@
 /*!
 
  =========================================================
- * Light Bootstrap Dashboard - v1.3.1.0
+ * Light Bootstrap Dashboard - v2.0.0
  =========================================================
 
  * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard
@@ -55,6 +55,112 @@ $(document).ready(function(){
 
     // Fixes sub-nav not working as expected on IOS
 $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
+
+    // Share buttons
+    if($('.twitter-sharrre').length != 0){
+        $('.twitter-sharrre').sharrre({
+          share: {
+            twitter: true
+          },
+          enableHover: false,
+          enabletracking: false,
+          enableCounter: false,
+          buttons: { twitter: {via: 'CreativeTim'}},
+          click: function(api, options){
+            api.simulateClick();
+            api.openPopup('twitter');
+          },
+          template: '<i class="fa fa-twitter"></i>',
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+        });
+    }
+
+    if($('.twitter-sharrre-nav').length != 0){
+        $('.twitter-sharrre-nav').sharrre({
+          share: {
+            twitter: true
+          },
+          enableHover: false,
+          enabletracking: false,
+          enableCounter: false,
+          buttons: { twitter: {via: 'CreativeTim'}},
+          click: function(api, options){
+            api.simulateClick();
+            api.openPopup('twitter');
+          },
+          template: '<i class="fa fa-twitter"></i><p class="hidden-lg-up">Twitter</p>',
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+        });
+    }
+
+    if($('.facebook-sharrre').length != 0){
+        $('.facebook-sharrre').sharrre({
+          share: {
+            facebook: true
+          },
+          enableHover: false,
+          enabletracking: false,
+          enableCounter: false,
+          click: function(api, options){
+            api.simulateClick();
+            api.openPopup('facebook');
+          },
+          template: '<i class="fa fa-facebook-square"></i>',
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+        });
+    }
+
+    if($('.facebook-sharrre-nav').length != 0){
+        $('.facebook-sharrre-nav').sharrre({
+          share: {
+            facebook: true
+          },
+          enableHover: false,
+          enabletracking: false,
+          enableCounter: false,
+          click: function(api, options){
+            api.simulateClick();
+            api.openPopup('facebook');
+          },
+          template: '<i class="fa fa-facebook-square"></i><p class="hidden-lg-up">Facebook</p>',
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+        });
+    }
+
+    if($('.linkedin-sharrre').length != 0){
+        $('.linkedin-sharrre').sharrre({
+          share: {
+            linkedin: true
+          },
+          enableCounter: false,
+          enableHover: false,
+          enabletracking: false,
+          click: function(api, options){
+            api.simulateClick();
+            api.openPopup('linkedin');
+          },
+          template: '<i class="fa fa-linkedin"></i>',
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+        });
+    }
+
+    if($('.linkedin-sharrre-nav').length != 0){
+        $('.linkedin-sharrre-nav').sharrre({
+          share: {
+            linkedin: true
+          },
+          enableCounter: false,
+          enableHover: false,
+          enabletracking: false,
+          click: function(api, options){
+            api.simulateClick();
+            api.openPopup('linkedin');
+          },
+          template: '<i class="fa fa-linkedin"></i><p class="hidden-lg-up">LinkedIn</p>',
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+        });
+    }
+
 });
 
 // activate collapse right menu when the windows is resized
@@ -207,3 +313,15 @@ function debounce(func, wait, immediate) {
 		if (immediate && !timeout) func.apply(context, args);
 	};
 };
+
+// analytics
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-46172202-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
