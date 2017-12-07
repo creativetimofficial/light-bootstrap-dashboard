@@ -1230,6 +1230,9 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   right: 0;
   left: auto;
   border-radius: 0; }
+.navbar .nc-icon {
+  font-weight: 700;
+  margin-top: 10px; }
 
 .navbar-transparent .navbar-brand, [class*="navbar-ct"] .navbar-brand {
   color: #FFFFFF;
