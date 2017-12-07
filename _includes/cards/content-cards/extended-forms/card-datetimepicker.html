@@ -1,0 +1,5 @@
+{% assign cardHeader = '<h4 class="card-title">'| append: include.cardHeaderTitle | append:'</h4>' %}
+{% assign cardOtherContent = '<div class="form-group">
+                                <input type="text" class="form-control '| append: include.datetimepickerClass | append:'" value="10/05/2016">
+                              </div>' %}
+{% include cards/card-basic.html %}

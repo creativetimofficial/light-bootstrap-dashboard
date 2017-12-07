@@ -1,0 +1,34 @@
+<div class="card{{ include.cardClasses }}">
+    <div class="card-header{{ include.headerClasses }}">
+        <h4 class="card-title">{{ include.tableTitle }}</h4>
+        {% if include.tableSubTitle != nill %}
+        <p class="category">{{ include.tableSubTitle }}</p>
+        {% endif %}
+    </div>
+    <div class="card-body{{ include.bodyClasses }}">
+        <div class="table-responsive">
+            <table class="table{{ include.tableClasses }}">
+                <thead class="{{ include.tableHeaderClasses }}">
+                    {% include cards/content-cards/tables/structure/table-header.html
+                        tableJson = include.tableJson
+                    %}
+                </thead>
+                <tbody>
+                    {% if include.shoppingCardTable != nill %}
+                        {% include cards/content-cards/tables/structure/table-body-shopping.html
+                            tableJson = include.tableJson
+                            hasTotalRow = include.hasTotalRow
+                        %}
+                    {% else %}
+                        {% include cards/content-cards/tables/structure/table-body.html
+                            colorClasses= include.colorClasses
+                            tableJson = include.tableJson
+                            colActions = include.colActions
+                            hasTotalRow = include.hasTotalRow
+                        %}
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

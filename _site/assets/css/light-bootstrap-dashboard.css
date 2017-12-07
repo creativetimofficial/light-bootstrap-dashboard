@@ -420,6 +420,11 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   -webkit-overflow-scrolling: touch; }
 
 .fixed-plugin .dropdown .dropdown-menu {
+  -webkit-transform: translate3d(0, -5%, 0) !important;
+  -moz-transform: translate3d(0, -5%, 0) !important;
+  -o-transform: translate3d(0, -5%, 0) !important;
+  -ms-transform: translate3d(0, -5%, 0) !important;
+  transform: translate3d(0, -5%, 0) !important;
   border-radius: 10px; }
 .fixed-plugin .dropdown .dropdown-menu li.adjustments-line {
   border-bottom: 1px solid #ddd; }
@@ -427,6 +432,57 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   padding: 5px 2px !important; }
 .fixed-plugin .dropdown .dropdown-menu .button-container a {
   font-size: 14px; }
+.fixed-plugin .dropdown .dropdown-menu .button-container.show {
+  -webkit-transform: translate3d(0, 0%, 0) !important;
+  -moz-transform: translate3d(0, 0%, 0) !important;
+  -o-transform: translate3d(0, 0%, 0) !important;
+  -ms-transform: translate3d(0, 0%, 0) !important;
+  transform: translate3d(0, 0%, 0) !important;
+  transform-origin: 0 0;
+  left: -303px !important; }
+
+.fixed-plugin .dropdown .dropdown-menu {
+  -webkit-transform: translate3d(0, -5%, 0) !important;
+  -moz-transform: translate3d(0, -5%, 0) !important;
+  -o-transform: translate3d(0, -5%, 0) !important;
+  -ms-transform: translate3d(0, -5%, 0) !important;
+  transform: translate3d(0, -5%, 0) !important;
+  top: -40px !important;
+  opacity: 0;
+  left: -303px !important;
+  transform-origin: 0 0; }
+
+.fixed-plugin .dropdown.show .dropdown-menu {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0%, 0) !important;
+  -moz-transform: translate3d(0, 0%, 0) !important;
+  -o-transform: translate3d(0, 0%, 0) !important;
+  -ms-transform: translate3d(0, 0%, 0) !important;
+  transform: translate3d(0, 0%, 0) !important;
+  transform-origin: 0 0;
+  left: -303px !important; }
+
+.fixed-plugin .dropdown-menu:before, .fixed-plugin .dropdown-menu:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 65px;
+  width: 16px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%); }
+
+.fixed-plugin .dropdown-menu:before {
+  border-bottom: 16px solid transparent;
+  border-left: 16px solid rgba(0, 0, 0, 0.2);
+  border-top: 16px solid transparent;
+  right: -16px; }
+
+.fixed-plugin .dropdown-menu:after {
+  border-bottom: 16px solid transparent;
+  border-left: 16px solid #fff;
+  border-top: 16px solid transparent;
+  right: -15px; }
 
 .modal.show .modal-dialog {
   -webkit-transform: translate(0, 30%);
@@ -1174,6 +1230,9 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   right: 0;
   left: auto;
   border-radius: 0; }
+.navbar .nc-icon {
+  font-weight: 700;
+  margin-top: 10px; }
 
 .navbar-transparent .navbar-brand, [class*="navbar-ct"] .navbar-brand {
   color: #FFFFFF;
@@ -1369,7 +1428,12 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
 .show .dropdown-menu {
   opacity: 1;
   filter: alpha(opacity=100);
-  visibility: visible; }
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0px, 0) !important;
+  -moz-transform: translate3d(0, 0px, 0) !important;
+  -o-transform: translate3d(0, 0px, 0) !important;
+  -ms-transform: translate3d(0, 0px, 0) !important;
+  transform: translate3d(0, 0px, 0) !important; }
 .select .dropdown-menu {
   border-radius: 0 0 10px 10px;
   -webkit-box-shadow: none;
@@ -1518,7 +1582,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   font-size: 14px;
   color: #333; }
 .card .card-footer {
-  padding: 0;
+  padding-top: 0;
   background-color: transparent;
   line-height: 30px;
   border-top: none !important;
@@ -2296,7 +2360,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
     -moz-transform: translate3d(262px, 0, 0);
     -o-transform: translate3d(262px, 0, 0);
     -ms-transform: translate3d(262px, 0, 0);
-    transform: translate3d(262px, 0, 0);
+    transform: translate3d(262px, 0, 0) !important;
     -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -2310,7 +2374,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
     -moz-transform: translate3d(-250px, 0, 0);
     -o-transform: translate3d(-250px, 0, 0);
     -ms-transform: translate3d(-250px, 0, 0);
-    transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-250px, 0, 0) !important;
     -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -2321,7 +2385,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
     -moz-transform: translate3d(10px, 0, 0);
     -o-transform: translate3d(10px, 0, 0);
     -ms-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0) !important;
     -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -2333,7 +2397,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
     -moz-transform: translate3d(0px, 0, 0);
     -o-transform: translate3d(0px, 0, 0);
     -ms-transform: translate3d(0px, 0, 0);
-    transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0) !important;
     -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -2349,7 +2413,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
     padding-bottom: 15px;
     padding-top: 5px; }
   .nav-mobile-menu .dropdown .dropdown-menu {
-    position: static;
+    position: static !important;
     float: none;
     width: auto;
     color: #FFFFFF;
@@ -2833,7 +2897,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   display: inline-block !important;
   height: 100%;
   color: #fff;
-  padding: 6px 12px;
+  padding: 6px 10px;
   font-size: 11px;
   text-indent: -5px;
   line-height: 15px;

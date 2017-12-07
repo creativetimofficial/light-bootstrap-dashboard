@@ -6,7 +6,7 @@
     background-color: #777777;
 }
 .typography-line{
-    padding-left: 25%;
+    padding-left: 15%;
     margin-bottom: 35px;
     position: relative;
     display: block;
@@ -14,12 +14,12 @@
 }
 .typography-line span{
     bottom: 10px;
-    color: #c0c1c2;
+    color: #9A9A9A;
     display: block;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 13px;
-    left: 0;
+    left: 5px;
     position: absolute;
     width: 260px;
     text-transform: none;

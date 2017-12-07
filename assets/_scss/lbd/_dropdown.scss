@@ -13,6 +13,7 @@
     .show &{
         @include opacity(1);
         visibility: visible;
+        @include transform-translate-3d-0(0px);
     }
     .select &{
        border-radius: $border-radius-bottom;
