@@ -4,7 +4,7 @@ const addEmptyLineBefore = require("../../utils/addEmptyLineBefore");
 const blockString = require("../../utils/blockString");
 const getPreviousNonSharedLineCommentNode = require("../../utils/getPreviousNonSharedLineCommentNode");
 const hasEmptyLine = require("../../utils/hasEmptyLine");
-const isAfterCommentLine = require("../../utils/isAfterCommentLine");
+const isAfterComment = require("../../utils/isAfterComment");
 const isCustomProperty = require("../../utils/isCustomProperty");
 const isFirstNested = require("../../utils/isFirstNested");
 const isSingleLineString = require("../../utils/isSingleLineString");
@@ -58,7 +58,7 @@ const rule = function(expectation, options, context) {
       // Optionally ignore the node if a comment precedes it
       if (
         optionsMatches(options, "ignore", "after-comment") &&
-        isAfterCommentLine(decl)
+        isAfterComment(decl)
       ) {
         return;
       }
@@ -73,29 +73,14 @@ const rule = function(expectation, options, context) {
 
       let expectEmptyLineBefore = expectation === "always" ? true : false;
 
-      // Optionally reverse the expectation for the first nested node
+      // Optionally reverse the expectation if any exceptions apply
       if (
-        optionsMatches(options, "except", "first-nested") &&
-        isFirstNested(decl)
-      ) {
-        expectEmptyLineBefore = !expectEmptyLineBefore;
-      }
-
-      // Optionally reverse the expectation if a comment precedes this node
-      if (
-        optionsMatches(options, "except", "after-comment") &&
-        isAfterCommentLine(decl)
-      ) {
-        expectEmptyLineBefore = !expectEmptyLineBefore;
-      }
-
-      // Optionally reverse the expectation if a custom property precedes this node
-      const prevNode = getPreviousNonSharedLineCommentNode(decl);
-      if (
-        optionsMatches(options, "except", "after-custom-property") &&
-        prevNode &&
-        prevNode.prop &&
-        isCustomProperty(prevNode.prop)
+        (optionsMatches(options, "except", "first-nested") &&
+          isFirstNested(decl)) ||
+        (optionsMatches(options, "except", "after-comment") &&
+          isAfterComment(decl)) ||
+        (optionsMatches(options, "except", "after-custom-property") &&
+          isAfterCustomProperty(decl))
       ) {
         expectEmptyLineBefore = !expectEmptyLineBefore;
       }
@@ -130,6 +115,11 @@ const rule = function(expectation, options, context) {
     });
   };
 };
+
+function isAfterCustomProperty(decl) {
+  const prevNode = getPreviousNonSharedLineCommentNode(decl);
+  return prevNode && prevNode.prop && isCustomProperty(prevNode.prop);
+}
 
 rule.ruleName = ruleName;
 rule.messages = messages;

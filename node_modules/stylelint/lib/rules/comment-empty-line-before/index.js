@@ -2,8 +2,9 @@
 
 const addEmptyLineBefore = require("../../utils/addEmptyLineBefore");
 const hasEmptyLine = require("../../utils/hasEmptyLine");
-const isAfterCommentLine = require("../../utils/isAfterCommentLine");
+const isAfterComment = require("../../utils/isAfterComment");
 const isFirstNested = require("../../utils/isFirstNested");
+const isFirstNodeOfRoot = require("../../utils/isFirstNodeOfRoot");
 const isSharedLineComment = require("../../utils/isSharedLineComment");
 const optionsMatches = require("../../utils/optionsMatches");
 const removeEmptyLinesBefore = require("../../utils/removeEmptyLinesBefore");
@@ -44,7 +45,7 @@ const rule = function(expectation, options, context) {
 
     root.walkComments(comment => {
       // Ignore the first node
-      if (comment === root.first) {
+      if (isFirstNodeOfRoot(comment)) {
         return;
       }
 
@@ -59,7 +60,7 @@ const rule = function(expectation, options, context) {
       // Optionally ignore newlines between comments
       if (
         optionsMatches(options, "ignore", "after-comment") &&
-        isAfterCommentLine(comment)
+        isAfterComment(comment)
       ) {
         return;
       }

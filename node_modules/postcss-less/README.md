@@ -4,7 +4,7 @@
 [Autoprefixer]: https://github.com/postcss/autoprefixer
 [Stylelint]: http://stylelint.io/
 
-# PostCSS LESS Syntax [![Build Status](https://img.shields.io/travis/shellscape/postcss-less.svg?branch=develop)](https://travis-ci.org/webschik/postcss-less) [![npm Version](https://img.shields.io/npm/v/postcss-less.svg)](https://www.npmjs.com/package/postcss-less)
+# PostCSS LESS Syntax [![Build Status](https://img.shields.io/travis/shellscape/postcss-less.svg?branch=develop)](https://travis-ci.org/shellscape/postcss-less) [![npm Version](https://img.shields.io/npm/v/postcss-less.svg)](https://www.npmjs.com/package/postcss-less)
 
 [PostCSS] Syntax for parsing [LESS]
 

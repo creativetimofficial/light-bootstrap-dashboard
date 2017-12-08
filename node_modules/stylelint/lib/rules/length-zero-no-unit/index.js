@@ -4,7 +4,9 @@ const _ = require("lodash");
 const beforeBlockString = require("../../utils/beforeBlockString");
 const blurComments = require("../../utils/blurComments");
 const hasBlock = require("../../utils/hasBlock");
+const isCustomProperty = require("../../utils/isCustomProperty");
 const keywordSets = require("../../reference/keywordSets");
+const optionsMatches = require("../../utils/optionsMatches");
 const report = require("../../utils/report");
 const ruleMessages = require("../../utils/ruleMessages");
 const styleSearch = require("style-search");
@@ -17,7 +19,7 @@ const messages = ruleMessages(ruleName, {
   rejected: "Unexpected unit"
 });
 
-const rule = function(actual) {
+const rule = function(actual, secondary, context) {
   return (root, result) => {
     const validOptions = validateOptions(result, ruleName, { actual });
     if (!validOptions) {
@@ -37,6 +39,14 @@ const rule = function(actual) {
 
     function check(value, node) {
       const ignorableIndexes = new Set();
+      const fixPositions = [];
+
+      if (
+        optionsMatches(secondary, "ignore", "custom-properties") &&
+        isCustomProperty(value)
+      ) {
+        return;
+      }
 
       styleSearch({ source: value, target: "0" }, match => {
         const index = match.startIndex;
@@ -111,6 +121,14 @@ const rule = function(actual) {
           return;
         }
 
+        if (context.fix) {
+          fixPositions.unshift({
+            startIndex: valueWithZeroStart,
+            length: valueWithZeroEnd - valueWithZeroStart
+          });
+          return;
+        }
+
         report({
           message: messages.rejected,
           node,
@@ -119,9 +137,43 @@ const rule = function(actual) {
           ruleName
         });
       });
+
+      if (fixPositions.length) {
+        fixPositions.forEach(function(fixPosition) {
+          let startIndex = fixPosition.startIndex;
+          // all nodes can have this
+          startIndex -= node.raws.between.length;
+
+          if (node.type === "atrule") {
+            // atrules have a name and raws.afterName
+            startIndex -= node.name.length;
+            startIndex -= node.raws.afterName.length;
+
+            node.params = replaceZero(
+              node.params,
+              startIndex,
+              fixPosition.length
+            );
+          } else {
+            // other nodes have prop
+            startIndex -= node.prop.length;
+            node.value = replaceZero(
+              node.value,
+              startIndex,
+              fixPosition.length
+            );
+          }
+        });
+      }
     }
   };
 };
+
+function replaceZero(input, startIndex, length) {
+  const stringStart = input.slice(0, startIndex);
+  const stringEnd = input.slice(startIndex + length);
+  return stringStart + "0" + stringEnd;
+}
 
 rule.ruleName = ruleName;
 rule.messages = messages;
