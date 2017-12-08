@@ -19,11 +19,13 @@
     .navbar-brand {
         font-weight: 400;
         margin: 5px 0px;
-        font-size: 20px;
+        font-size: 18px;
         color: $default-color;
+        opacity: .8;
 
         &:hover{
-            color: #5e5e5e;
+            color: $default-color;
+            opacity: 1;
         }
     }
     .navbar-toggler{
@@ -61,6 +63,10 @@
         }
     }
 
+    .btn-round.btn-icon{
+        padding: 8px 9px;
+    }
+
 
     .navbar-nav{
         .nav-item{
@@ -90,6 +96,10 @@
 
                 &:hover{
                     color: $info-color;
+                }
+
+                .stats{
+                    margin-left: 10px;
                 }
             }
 
@@ -138,7 +148,7 @@
             width: 0;
             height: 0;
             margin-left: 5px;
-            margin-top: 20px;
+            margin-top: 18px;
             vertical-align: middle;
             border-top: 4px dashed;
             border-top: 4px solid\9;
@@ -160,22 +170,20 @@
         left: auto;
         border-radius: 0;
     }
-    
-    .nc-icon{
-        font-weight: 700;
-        margin-top: 10px;
-    }
+
 }
 
 .navbar-transparent, [class*="navbar-ct"]{
     .navbar-brand{
         color: $white-color;
+        margin-left: 10px;
         @include opacity(.9);
 
         &:focus,
         &:hover{
             background-color: transparent;
             @include opacity(1);
+            color: $white-color;
         }
     }
 
@@ -196,7 +204,12 @@
                 background-color: transparent;
                 border-radius: 3px;
                 color: $white-color;
-                @include opacity(1);
+                @include opacity(.9);
+
+                &:focus,
+                &:hover{
+                    @include opacity(1);
+                }
             }
         }
 
@@ -354,6 +367,12 @@
     padding-top: 15px;
     background-color: transparent;
     border-bottom: 1px solid transparent;
+    z-index: 999;
+    .navbar-toggler{
+        .burger-lines{
+            background: $white-color;
+        }
+    }
 }
 
 .navbar-toggle{
@@ -372,5 +391,38 @@
     &.navbar-default .navbar-toggle:hover,
     &.navbar-default .navbar-toggle:focus {
         background-color: transparent;
+    }
+}
+
+.main-panel{
+    .navbar-fixed{
+        position: fixed;
+        right: 0;
+        width: calc(100% - 260px);
+        z-index: 1030;
+    }
+    .navbar-fixed + .content{
+        padding-top: 90px;
+    }
+}
+
+.nav-open .nav .navbar-search-form{
+    .nc-icon{
+        font-size: 28px;
+        width: 30px;
+        text-align: center;
+        vertical-align: middle;
+        float: left;
+    }
+}
+
+.nav{
+    .nc-icon{
+        margin-top: 10px;
+    }
+    .navbar-form.navbar-search-form{
+        .nc-icon{
+            margin: 5px 10px 0 10px;
+        }
     }
 }
