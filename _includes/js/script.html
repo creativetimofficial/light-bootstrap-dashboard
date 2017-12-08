@@ -61,12 +61,12 @@
         suggestions_distance = $("#suggestions").offset();
         pay_height = $('.fixed-section').outerHeight();
 
-        $(window).on('scroll', nowuiDashboard.checkScrollForTransparentNavbar);
+        $(window).on('scroll', lbd.checkScrollForTransparentNavbar);
 
         if ($(window).width() >= 768){
             big_image = $('.header[data-parallax="true"]');
             if(big_image.length != 0){
-               $(window).on('scroll', nowuiDashboardDemo.checkScrollForParallax);
+               $(window).on('scroll', lbdDemo.checkScrollForParallax);
             }
         }
 
@@ -86,7 +86,6 @@
                 }
             });
     	}
-
     });
 </script>
 
