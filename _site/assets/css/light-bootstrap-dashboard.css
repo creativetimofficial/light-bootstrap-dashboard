@@ -162,7 +162,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
 .page-header .title-container {
   color: #fff;
   position: relative;
-  top: 250px;
+  top: 150px;
   z-index: 3; }
 .page-header .filter:after {
   background: transparent linear-gradient(to bottom, #9368e9 0%, #943bea 100%) repeat scroll 0 0/150% 150%;
@@ -177,7 +177,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   z-index: 2; }
 
 .documentation .page-header, .documentation .page-header-image, .documentation .page-header-image .filter:after {
-  height: 100vh; }
+  height: 60vh; }
 
 .documentation .footer {
   z-index: 3; }

@@ -73,7 +73,7 @@ input:focus {
     .title-container{
         color: #fff;
         position: relative;
-        top: 250px;
+        top: 150px;
         z-index: 3;
     }
     .filter:after{
@@ -93,7 +93,7 @@ input:focus {
 .documentation .page-header,
 .documentation .page-header-image,
 .documentation .page-header-image .filter:after{
-    height: 100vh;
+    height: 60vh;
 }
 
 .documentation .footer{
