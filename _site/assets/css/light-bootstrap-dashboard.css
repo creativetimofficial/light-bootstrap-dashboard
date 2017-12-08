@@ -1465,12 +1465,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
 .show .dropdown-menu {
   opacity: 1;
   filter: alpha(opacity=100);
-  visibility: visible;
-  -webkit-transform: translate3d(0, 0px, 0) !important;
-  -moz-transform: translate3d(0, 0px, 0) !important;
-  -o-transform: translate3d(0, 0px, 0) !important;
-  -ms-transform: translate3d(0, 0px, 0) !important;
-  transform: translate3d(0, 0px, 0) !important; }
+  visibility: visible; }
 .select .dropdown-menu {
   border-radius: 0 0 10px 10px;
   -webkit-box-shadow: none;
@@ -1526,6 +1521,15 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   background-color: rgba(255, 149, 0, 0.2); }
 .dropdown-menu.dropdown-red > li > a:hover, .dropdown-menu.dropdown-red > li > a:focus {
   background-color: rgba(255, 74, 85, 0.2); }
+.dropdown-menu .dropdown-item i[class*="nc-icon"] {
+  font-size: 18px;
+  text-align: center;
+  line-height: 25px;
+  float: left;
+  padding-right: 10px; }
+.dropdown-menu.dropdown-menu-right:before, .dropdown-menu.dropdown-menu-right:after {
+  right: 12px !important;
+  left: auto !important; }
 
 .dropdown-with-icons > li > a {
   padding-left: 0px;

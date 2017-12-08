@@ -13,7 +13,6 @@
     .show &{
         @include opacity(1);
         visibility: visible;
-        @include transform-translate-3d-0(0px);
     }
     .select &{
        border-radius: $border-radius-bottom;
@@ -85,6 +84,24 @@
     &.dropdown-red > li > a:hover,
     &.dropdown-red > li > a:focus{
         background-color: $light-red;
+    }
+
+    .dropdown-item{
+        i[class*="nc-icon"]{
+            font-size: 18px;
+            text-align: center;
+            line-height: 25px;
+            float: left;
+            padding-right: 10px;
+        }
+    }
+
+    &.dropdown-menu-right{
+        &:before,
+        &:after{
+            right: 12px !important;
+            left: auto !important;
+        }
     }
 
 }
