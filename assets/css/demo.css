@@ -749,3 +749,12 @@
 .section-images{
     padding-bottom: 0;
 }
+
+
+.documentation .dropdown .dropdown-menu{
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.documentation .dropdown .dropdown-menu.show{
+    transform: translate3d(0, 39px, 0) !important;
+}
