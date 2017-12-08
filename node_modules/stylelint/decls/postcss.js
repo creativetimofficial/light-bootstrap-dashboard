@@ -1,7 +1,7 @@
 declare class postcss$node {
-  raw: Function,
-  raws: Object,
-  type: 'rule' | 'atrule' | 'root' | 'comment' | 'decl';
+  raw: Function;
+  raws: Object;
+  type: "rule" | "atrule" | "root" | "comment" | "decl";
   parent: Object;
   nodes: Array<Object>;
   next(): postcss$node | void;
@@ -9,21 +9,21 @@ declare class postcss$node {
   source: {
     start: {
       line: number,
-      column: number,
+      column: number
     },
     end: {
       line: number,
-      column: number,
-    },
+      column: number
+    }
   };
-  error(message: string, options: { plugin: string }): void,
+  error(message: string, options: { plugin: string }): void;
 }
 
 declare class postcss$comment extends postcss$node {
   text: string;
   raws: {
     before?: string,
-    after?: string,
+    after?: string
   };
 }
 
@@ -33,7 +33,7 @@ declare class postcss$atRule extends postcss$node {
   raws: {
     before?: string,
     after?: string,
-    afterName?: string,
+    afterName?: string
   };
 }
 
@@ -41,7 +41,7 @@ declare class postcss$rule extends postcss$node {
   selector: string;
   raws: {
     before?: string,
-    after?: string,
+    after?: string
   };
 }
 
@@ -50,15 +50,30 @@ declare class postcss$decl extends postcss$node {
   value: string;
   raws: {
     before?: string,
-    after?: string,
+    after?: string
   };
 }
 
+declare function postcss$parser(
+  css: ?string,
+  opts: postcss$options
+): postcss$node;
+
+declare function postcss$stringifier(postcss$node, builder: Function): void;
+
+export type postcss$syntax = {
+  stringify?: postcss$stringifier,
+  parse?: postcss$parser
+};
+
 export type postcss$options = {
   from?: string,
-  parser?: stylelint$syntaxes,
-  syntax?: stylelint$syntaxes,
-}
+  to?: string,
+  parser?: postcss$parser,
+  stringifier?: postcss$stringifier,
+  syntax?: postcss$syntax,
+  map?: Object
+};
 
 export type postcss$result = {
   css: string,
@@ -67,6 +82,6 @@ export type postcss$result = {
     disabledRanges: disabledRangeObject,
     ruleSeverities?: Object,
     customMessages?: Object,
-    quiet?: boolean,
-  },
-}
+    quiet?: boolean
+  }
+};

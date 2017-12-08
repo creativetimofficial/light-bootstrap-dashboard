@@ -33,11 +33,11 @@ read(__dirname) === [
 
 ### read(root [, filter])
 
-`root` is the directory you wish to scan. `filter` is an optional filter for the files. By default, filter is:
+`root` is the directory you wish to scan. `filter` is an optional filter for the files with three params(name, index, dir). By default, filter is:
 
 ```js
-function (x) {
-  return x[0] !== '.'
+function (name) {
+  return name[0] !== '.'
 }
 ```
 

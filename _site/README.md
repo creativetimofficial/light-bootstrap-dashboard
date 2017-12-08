@@ -23,6 +23,7 @@ What's included
 Within the download you'll find the following directories and files:
 
 Light Bootstrap Dashboard
+
 ├── assets
 │   ├── css
 │   ├── fonts
@@ -42,6 +43,9 @@ Light Bootstrap Dashboard
 │   │       ├── jquery.sharrre.js
 │   │       └── nouislider.min.js
 │   └── main.css
+│   │       └── nouislider.min.js
+│   └── main.css
+├── deploy.sh
 ├── documentation
 │   ├── template.html
 │   └── tutorial-components.html

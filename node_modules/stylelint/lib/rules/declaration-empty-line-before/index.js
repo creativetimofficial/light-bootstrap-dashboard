@@ -3,7 +3,7 @@
 const addEmptyLineBefore = require("../../utils/addEmptyLineBefore");
 const blockString = require("../../utils/blockString");
 const hasEmptyLine = require("../../utils/hasEmptyLine");
-const isAfterCommentLine = require("../../utils/isAfterCommentLine");
+const isAfterComment = require("../../utils/isAfterComment");
 const isAfterStandardPropertyDeclaration = require("../../utils/isAfterStandardPropertyDeclaration");
 const isCustomProperty = require("../../utils/isCustomProperty");
 const isFirstNested = require("../../utils/isFirstNested");
@@ -62,7 +62,7 @@ const rule = function(expectation, options, context) {
       // Optionally ignore the node if a comment precedes it
       if (
         optionsMatches(options, "ignore", "after-comment") &&
-        isAfterCommentLine(decl)
+        isAfterComment(decl)
       ) {
         return;
       }
@@ -85,26 +85,14 @@ const rule = function(expectation, options, context) {
 
       let expectEmptyLineBefore = expectation === "always" ? true : false;
 
-      // Optionally reverse the expectation for the first nested node
+      // Optionally reverse the expectation if any exceptions apply
       if (
-        optionsMatches(options, "except", "first-nested") &&
-        isFirstNested(decl)
-      ) {
-        expectEmptyLineBefore = !expectEmptyLineBefore;
-      }
-
-      // Optionally reverse the expectation if a comment precedes this node
-      if (
-        optionsMatches(options, "except", "after-comment") &&
-        isAfterCommentLine(decl)
-      ) {
-        expectEmptyLineBefore = !expectEmptyLineBefore;
-      }
-
-      // Optionally reverse the expectation if a declaration precedes this node
-      if (
-        optionsMatches(options, "except", "after-declaration") &&
-        isAfterStandardPropertyDeclaration(decl)
+        (optionsMatches(options, "except", "first-nested") &&
+          isFirstNested(decl)) ||
+        (optionsMatches(options, "except", "after-comment") &&
+          isAfterComment(decl)) ||
+        (optionsMatches(options, "except", "after-declaration") &&
+          isAfterStandardPropertyDeclaration(decl))
       ) {
         expectEmptyLineBefore = !expectEmptyLineBefore;
       }

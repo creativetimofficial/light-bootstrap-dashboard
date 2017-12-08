@@ -1,7 +1,11 @@
 "use strict";
 
 const addEmptyLineBefore = require("../../utils/addEmptyLineBefore");
+const getPreviousNonSharedLineCommentNode = require("../../utils/getPreviousNonSharedLineCommentNode");
 const hasEmptyLine = require("../../utils/hasEmptyLine");
+const isAfterSingleLineComment = require("../../utils/isAfterSingleLineComment");
+const isFirstNested = require("../../utils/isFirstNested");
+const isFirstNodeOfRoot = require("../../utils/isFirstNodeOfRoot");
 const isSingleLineString = require("../../utils/isSingleLineString");
 const isStandardSyntaxRule = require("../../utils/isStandardSyntaxRule");
 const optionsMatches = require("../../utils/optionsMatches");
@@ -34,7 +38,8 @@ const rule = function(expectation, options, context) {
             "after-rule",
             "after-single-line-comment",
             "first-nested",
-            "inside-block-and-after-rule"
+            "inside-block-and-after-rule",
+            "inside-block"
           ]
         },
         optional: true
@@ -51,12 +56,9 @@ const rule = function(expectation, options, context) {
       }
 
       // Ignore the first node
-      if (rule === root.first) {
+      if (isFirstNodeOfRoot(rule)) {
         return;
       }
-
-      let expectEmptyLineBefore =
-        expectation.indexOf("always") !== -1 ? true : false;
 
       // Optionally ignore the expectation if a comment precedes this node
       if (
@@ -67,11 +69,10 @@ const rule = function(expectation, options, context) {
         return;
       }
 
+      const isNested = rule.parent.type !== "root";
+
       // Optionally ignore the expectation if inside a block
-      if (
-        optionsMatches(options, "ignore", "inside-block") &&
-        rule.parent !== root
-      ) {
+      if (optionsMatches(options, "ignore", "inside-block") && isNested) {
         return;
       }
 
@@ -83,39 +84,21 @@ const rule = function(expectation, options, context) {
         return;
       }
 
-      // Optionally reverse the expectation for the first nested node
-      if (
-        optionsMatches(options, "except", "first-nested") &&
-        rule === rule.parent.first
-      ) {
-        expectEmptyLineBefore = !expectEmptyLineBefore;
-      }
+      let expectEmptyLineBefore =
+        expectation.indexOf("always") !== -1 ? true : false;
 
-      // Optionally reverse the expectation if a rule precedes this node
+      // Optionally reverse the expectation if any exceptions apply
       if (
-        optionsMatches(options, "except", "after-rule") &&
-        rule.prev() &&
-        rule.prev().type === "rule"
-      ) {
-        expectEmptyLineBefore = !expectEmptyLineBefore;
-      }
-
-      // Optionally reverse the expectation if a rule precedes this node and is inside a block
-      if (
-        optionsMatches(options, "except", "inside-block-and-after-rule") &&
-        rule.prev() &&
-        rule.prev().type === "rule" &&
-        rule.parent !== root
-      ) {
-        expectEmptyLineBefore = !expectEmptyLineBefore;
-      }
-
-      // Optionally reverse the expectation for single line comments
-      if (
-        optionsMatches(options, "except", "after-single-line-comment") &&
-        rule.prev() &&
-        rule.prev().type === "comment" &&
-        isSingleLineString(rule.prev().toString())
+        (optionsMatches(options, "except", "first-nested") &&
+          isFirstNested(rule)) ||
+        (optionsMatches(options, "except", "after-rule") &&
+          isAfterRule(rule)) ||
+        (optionsMatches(options, "except", "inside-block-and-after-rule") &&
+          isNested &&
+          isAfterRule(rule)) ||
+        (optionsMatches(options, "except", "after-single-line-comment") &&
+          isAfterSingleLineComment(rule)) ||
+        (optionsMatches(options, "except", "inside-block") && isNested)
       ) {
         expectEmptyLineBefore = !expectEmptyLineBefore;
       }
@@ -151,6 +134,11 @@ const rule = function(expectation, options, context) {
     });
   };
 };
+
+function isAfterRule(rule) {
+  const prevNode = getPreviousNonSharedLineCommentNode(rule);
+  return prevNode && prevNode.type === "rule";
+}
 
 rule.ruleName = ruleName;
 rule.messages = messages;

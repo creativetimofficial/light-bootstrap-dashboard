@@ -4,10 +4,11 @@ const _ = require("lodash");
 const addEmptyLineBefore = require("../../utils/addEmptyLineBefore");
 const getPreviousNonSharedLineCommentNode = require("../../utils/getPreviousNonSharedLineCommentNode");
 const hasEmptyLine = require("../../utils/hasEmptyLine");
-const isAfterCommentLine = require("../../utils/isAfterCommentLine");
+const isAfterComment = require("../../utils/isAfterComment");
 const isBlocklessAtRuleAfterBlocklessAtRule = require("../../utils/isBlocklessAtRuleAfterBlocklessAtRule");
 const isBlocklessAtRuleAfterSameNameBlocklessAtRule = require("../../utils/isBlocklessAtRuleAfterSameNameBlocklessAtRule");
 const isFirstNested = require("../../utils/isFirstNested");
+const isFirstNodeOfRoot = require("../../utils/isFirstNodeOfRoot");
 const optionsMatches = require("../../utils/optionsMatches");
 const removeEmptyLinesBefore = require("../../utils/removeEmptyLinesBefore");
 const report = require("../../utils/report");
@@ -56,10 +57,9 @@ const rule = function(expectation, options, context) {
     }
 
     root.walkAtRules(atRule => {
-      const isNested = atRule.parent !== root;
-
+      const isNested = atRule.parent.type !== "root";
       // Ignore the first node
-      if (atRule === root.first) {
+      if (isFirstNodeOfRoot(atRule)) {
         return;
       }
 
@@ -97,7 +97,7 @@ const rule = function(expectation, options, context) {
       // Optionally ignore the expectation if a comment precedes this node
       if (
         optionsMatches(options, "ignore", "after-comment") &&
-        isAfterCommentLine(atRule)
+        isAfterComment(atRule)
       ) {
         return;
       }

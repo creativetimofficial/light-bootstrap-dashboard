@@ -133,7 +133,7 @@ function do_build(gyp,argv,callback) {
 function print_fallback_error(err,opts,package_json) {
     var fallback_message = ' (falling back to source compile with node-gyp)';
     var full_message = "Pre-built binaries not found for " + package_json.name + "@" + package_json.version;
-    full_message += " and " + opts.runtime + "@" + (opts.target || process.versions.node) + " (" + opts.node_abi + " ABI)";
+    full_message += " and " + opts.runtime + "@" + (opts.target || process.versions.node) + " (" + opts.node_abi + " ABI, " + opts.libc + ")";
     full_message += fallback_message;
     log.error("Tried to download(" + err.statusCode + "): " + opts.hosted_tarball);
     log.error(full_message);
