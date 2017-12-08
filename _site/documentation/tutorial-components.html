@@ -150,13 +150,13 @@
 <nav class="navbar navbar-expand-lg  navbar-transparent " color-on-scroll="500">
 	<div class="  container-fluid ">
 
-		
+
 
 		<a class="navbar-brand" href="http://demos.creative-tim.com/now-ui-dashboard/index.html" target="_blank">
 			Light Bootstrap Dashboard - Docs
 		</a>
 
-		
+
 
 		<button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"  aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-bar burger-lines"></span>
@@ -165,7 +165,7 @@
 		</button>
 
 	    <div class="collapse navbar-collapse justify-content-end" id="navigation">
-			
+
 
 			<ul class="navbar-nav">
 				<li class="nav-item">
@@ -179,7 +179,7 @@
 			   	</li>
 			</ul>
 
-			
+
 	    </div>
 	</div>
 </nav>
@@ -200,7 +200,7 @@
 </div>
 
 
-		
+
 
 <div class="wrapper">
 
@@ -1742,35 +1742,36 @@ Chartist.Bar('#chartActivity', data, options, responsiveOptions);
     $(document).ready(function(){
 
         demo.initDashboardPageCharts();
-        
-        function showNotification(from, align){
-        	color = Math.floor((Math.random() * 4) + 1);
-
-        	$.notify({
-        		icon: "pe-7s-gift",
-        		message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
-
-        	},{
-        		type: type[color],
-        		timer: 4000,
-        		placement: {
-        			from: from,
-        			align: align
-        		}
-        	});
-        }
 
         suggestions_distance = $("#suggestions").offset();
         pay_height = $('.fixed-section').outerHeight();
 
-        $(window).on('scroll', nowuiDashboard.checkScrollForTransparentNavbar);
+        $(window).on('scroll', lbd.checkScrollForTransparentNavbar);
 
         if ($(window).width() >= 768){
             big_image = $('.header[data-parallax="true"]');
             if(big_image.length != 0){
-               $(window).on('scroll', nowuiDashboardDemo.checkScrollForParallax);
+               $(window).on('scroll', lbd.checkScrollForParallax);
             }
         }
+
+        function showNotification(from, align){
+        	color = Math.floor((Math.random() * 4) + 1);
+
+        	$.notify({
+            	icon: "nc-icon nc-app",
+            	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+
+            },{
+                type: type[color],
+                timer: 8000,
+                placement: {
+                    from: from,
+                    align: align
+                }
+            });
+    	}
+
     });
 </script>
 
