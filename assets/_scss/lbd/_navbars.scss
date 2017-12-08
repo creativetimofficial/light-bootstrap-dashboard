@@ -160,7 +160,7 @@
         left: auto;
         border-radius: 0;
     }
-    
+
     .nc-icon{
         font-weight: 700;
         margin-top: 10px;
@@ -176,6 +176,7 @@
         &:hover{
             background-color: transparent;
             @include opacity(1);
+            color: $white-color;
         }
     }
 
