@@ -1483,8 +1483,9 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   vertical-align: middle;
   float: left; }
 
-.nav .nc-icon {
+nav .nc-icon {
   margin-top: 10px; }
+
 .nav .navbar-form.navbar-search-form .nc-icon {
   margin: 5px 10px 0 10px; }
 
