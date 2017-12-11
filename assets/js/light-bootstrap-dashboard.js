@@ -87,8 +87,6 @@ lbd = {
     initRightMenu: function(){
        $sidebar_wrapper = $('.sidebar-wrapper');
 
-       //console.log('aici se face meniu in dreapta');
-
        if(!mobile_menu_initialized){
 
            $navbar = $('nav').find('.navbar-collapse').first().clone(true);
@@ -97,14 +95,10 @@ lbd = {
            mobile_menu_content = '';
 
            //add the content from the regular header to the mobile menu
-           //pas = 1;
            $navbar.children('ul').each(function(){
 
                content_buff = $(this).html();
                nav_content = nav_content + content_buff;
-               //console.log('pas:' + pas);
-
-               //pas = pas+1;
            });
 
            nav_content = '<ul class="nav nav-mobile-menu">' + nav_content + '</ul>';

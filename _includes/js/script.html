@@ -8,7 +8,7 @@
 <script src="{{ path-assets }}/assets/js/plugins/bootstrap-switch.js"></script>
 
 <!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?YOUR_KEY_HERE"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 
 <!--  Chartist Plugin  -->
 <script src="{{ path-assets }}/assets/js/plugins/chartist.min.js"></script>
@@ -16,14 +16,11 @@
 <!--  Notifications Plugin    -->
 <script src="{{ path-assets }}/assets/js/plugins/bootstrap-notify.js"></script>
 
-<!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
 <script src="{{ path-assets }}/assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
 
-<!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
 <script src="{{ path-assets }}/assets/js/demo.js"></script>
-
-
-
 
 {% if page.brand == "Maps" %}
     <script type="text/javascript">
@@ -55,14 +52,6 @@
         suggestions_distance = $("#suggestions").offset();
         pay_height = $('.fixed-section').outerHeight();
 
-        $(window).on('scroll', nowuiDashboard.checkScrollForTransparentNavbar);
-
-        if ($(window).width() >= 768){
-            big_image = $('.header[data-parallax="true"]');
-            if(big_image.length != 0){
-               $(window).on('scroll', nowuiDashboardDemo.checkScrollForParallax);
-            }
-        }
     });
 </script>
 
