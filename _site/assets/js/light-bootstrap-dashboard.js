@@ -71,7 +71,7 @@ $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropa
             api.openPopup('twitter');
           },
           template: '<i class="fa fa-twitter"></i>',
-          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard/examples/dashboard.html'
         });
     }
 
@@ -89,7 +89,7 @@ $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropa
             api.openPopup('twitter');
           },
           template: '<i class="fa fa-twitter"></i><p class="hidden-lg-up">Twitter</p>',
-          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard/examples/dashboard.html'
         });
     }
 
@@ -106,7 +106,7 @@ $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropa
             api.openPopup('facebook');
           },
           template: '<i class="fa fa-facebook-square"></i>',
-          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard/examples/dashboard.html'
         });
     }
 
@@ -123,7 +123,7 @@ $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropa
             api.openPopup('facebook');
           },
           template: '<i class="fa fa-facebook-square"></i><p class="hidden-lg-up">Facebook</p>',
-          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard/examples/dashboard.html'
         });
     }
 
@@ -140,7 +140,7 @@ $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropa
             api.openPopup('linkedin');
           },
           template: '<i class="fa fa-linkedin"></i>',
-          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard/examples/dashboard.html'
         });
     }
 
@@ -157,7 +157,7 @@ $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropa
             api.openPopup('linkedin');
           },
           template: '<i class="fa fa-linkedin"></i><p class="hidden-lg-up">LinkedIn</p>',
-          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/examples/dashboard.html'
+          url: 'http://demos.creative-tim.com/light-bootstrap-dashboard/examples/dashboard.html'
         });
     }
 
