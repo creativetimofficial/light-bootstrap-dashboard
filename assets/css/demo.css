@@ -51,8 +51,8 @@
 }
 
 .fixed-plugin{
-    position: fixed;
-    top: 200px;
+    position: absolute;
+    top: 110px;
     right: 0;
     width: 64px;
     background: rgba(0,0,0,.3);

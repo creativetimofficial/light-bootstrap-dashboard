@@ -11,6 +11,9 @@
             {% include sidebar.html %}
 
             <div class="main-panel">
+                <!-- fixed plugin  -->
+                {% include fixed-plugin.html %}
+                
                 {% include navbar.html %}
 
                 {% if page.brand == "Maps" %}
@@ -28,9 +31,7 @@
                 {% include footer.html %}
             </div>
         </div>
-        
-        <!-- fixed plugin  -->
-        {% include fixed-plugin.html %}
+
     </body>
 
     {% include js/script.html %}
