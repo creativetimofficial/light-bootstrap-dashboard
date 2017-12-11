@@ -1,0 +1,171 @@
+.from-check,
+.form-check-radio {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.form-check{
+    .form-check-label{
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding-left: 35px;
+        line-height: 26px;
+        margin-bottom: 0;
+        text-transform: capitalize;
+    }
+
+    .form-check-sign::before,
+    .form-check-sign::after{
+        font-family: 'FontAwesome';
+        content: "\f096";
+        color: $default-color;
+        display: inline-block;
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        margin-left: -23px;
+        font-size: 18px;
+        cursor: pointer;
+        @include transition-opacity(.3s, linear);
+    }
+    .form-check-sign::after{
+        font-family: 'FontAwesome';
+        content: "\f046";
+        text-align: center;
+        opacity: 0;
+        color: $info-color;
+        border: 0;
+        background-color: inherit;
+        margin-left: -23px;
+    }
+    .form-check-sign::before{
+        margin-left: -22px;
+    }
+    &.disabled{
+        .form-check-label{
+            color: $dark-gray;
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+
+}
+
+#RegisterValidation .card{
+    .form-check{
+        .form-check-sign:before{
+            margin-left: -27px;
+        }
+    }
+}
+
+.form-check .form-check-input:disabled + .form-check-sign:before,
+.form-check .form-check-input:disabled + .form-check-sign:after,
+.radio input[type="radio"]:disabled + label,
+.form-check .form-check-input:disabled:checked + .form-check-sign::after{
+    color: #ddd;
+    pointer-events: none
+}
+
+.form-check.disabled .form-check-label{
+    cursor: not-allowed;
+}
+
+.form-check input[type="checkbox"],
+.form-check-radio input[type="radio"]{
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+}
+.form-check input[type="checkbox"]:checked + .form-check-sign::after{
+    opacity: 1;
+}
+
+.form-check input[type="checkbox"]:checked + .form-check-sign::before{
+    opacity: 0;
+}
+
+.form-control input[type="checkbox"]:disabled + .form-check-sign::before,
+.checkbox input[type="checkbox"]:disabled + .form-check-sign::after{
+    cursor: not-allowed;
+}
+
+.form-check .form-check-label input[type="checkbox"]:disabled + .form-check-sign,
+.form-check-radio input[type="radio"]:disabled + .form-check-sign{
+    pointer-events: none !important;
+}
+
+.form-check.checkbox-inline{
+    display: inline-block;
+}
+
+
+.form-check-radio{
+    .form-check-label{
+        padding-left: 2.2rem;
+    }
+    &.disabled{
+        .form-check-label{
+            color: $dark-gray;
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.form-check-radio .form-check-sign::before{
+    font-family: 'FontAwesome';
+    content: "\f10c";
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    position: absolute;
+    opacity: .50;
+    left: 34px;
+}
+
+.form-check-radio input[type="radio"] + .form-check-sign:after,
+.form-check-radio input[type="radio"] {
+    opacity: 0;
+    @include transition-opacity(.3s, linear);
+    content:" ";
+    display: block;
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.form-check-radio input[type="radio"]:checked + .form-check-sign::after {
+    font-family: 'FontAwesome';
+    content: "\f192";
+    position: absolute;
+    left: 5.3px;
+    opacity: 1;
+}
+
+.form-check-radio input[type="radio"]:checked + .form-check-sign::after{
+    opacity: 1;
+    @include transition-opacity(.3s, linear);
+}
+
+.form-check input[type="radio"]:checked + .form-check-sign::before{
+    opacity: 0;
+    @include transition-opacity(.3s, linear);
+}
+
+.form-check-radio input[type="radio"]:disabled + .form-check-sign::before,
+.form-check-radio input[type="radio"]:disabled + .form-check-sign::after {
+    color: $dark-gray;
+}
+
+.card{
+    &.stacked-form,
+    &.horizontal-form{
+        .form-check{
+            .form-check-label{
+                padding-left: 22px !important;
+            }
+        }
+    }
+}
