@@ -20,16 +20,6 @@
           box-sizing: $boxmodel;
 }
 
-// Transition w/ opacity
-
-@mixin transition-opacity($time, $type){
-    -webkit-transition: opacity $time $type;
-    -moz-transition: opacity $time $type;
-    -o-transition: opacity $time $type;
-    -ms-transition: opacity $time $type;
-    transition: opacity $time $type;
-}
-
 
 @mixin transition($time, $type){
     -webkit-transition: all $time $type;
