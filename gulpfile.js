@@ -1,8 +1,8 @@
 // Gulp.js configuration
 'use strict';
 
-const productname = 'material-dashboard-pro',
-      version = 'v1.2.1';
+const productname = 'light-bootstrap-dashboard',
+      version = 'v2.0.0';
 
 const
 
@@ -40,12 +40,25 @@ const move_html = {
   build         : dir.build
 };
 
+const move_bootstrap3 = {
+  src           : '/BS3/**/*',
+  build         : '/dist/BS3/'
+};
+
 // copy HTML files
 gulp.task('move_html', () => {
   return gulp.src(move_html.src)
     .pipe(newer(move_html.build))
     .pipe(gulp.dest(move_html.build));
 });
+
+// copy HTML files
+gulp.task('move_bootstrap3_html', () => {
+  return gulp.src(['BS3/**/*']).pipe(gulp.dest('dist/BS3'));;
+});
+
+
+
 
 // Move MD settings
 const move_md = {
@@ -123,7 +136,7 @@ gulp.task('move_images', () => {
 
 
 gulp.task('clean_scss', function () {
-    return gulp.src(dir.build + '/assets/css/material-dashboard.scss', {read: false})
+    return gulp.src(dir.build + '/assets/css/' + productname + '.scss', {read: false})
         .pipe(clean());
 });
 
@@ -164,7 +177,6 @@ gulp.task( "remove-lines-from-scss", function ( ) {
 });
 
 
-
 // CSS settings
 var css = {
   src         : dir.src + 'scss/style.scss',
@@ -190,14 +202,6 @@ var css = {
   ]
 };
 
-// CSS processing
-// gulp.task('css', ['images'], () => {
-//   return gulp.src(css.src)
-//     .pipe(sass(css.sassOpts))
-//     .pipe(postcss(css.processors))
-//     .pipe(gulp.dest(css.build))
-//     .pipe(browsersync ? browsersync.reload({ stream: true }) : gutil.noop());
-// });
 
 // Zip files up
 gulp.task('zip', function () {

@@ -43,3 +43,8 @@ exclude:
     - build-product
     - gulpfile.js
     - backstop_data
+    - package-lock.json
+    - deploy.sh
+    - nucleo-icons.html
+    - BS3
+    - dist
