@@ -19,6 +19,7 @@
     .navbar-brand {
         font-weight: 400;
         margin: 5px 0px;
+<<<<<<< HEAD
         font-size: 18px;
         color: $default-color;
         opacity: .8;
@@ -26,6 +27,13 @@
         &:hover{
             color: $default-color;
             opacity: 1;
+=======
+        font-size: 20px;
+        color: $default-color;
+
+        &:hover{
+            color: #5e5e5e;
+>>>>>>> bs4-dev
         }
     }
     .navbar-toggler{
@@ -63,10 +71,13 @@
         }
     }
 
+<<<<<<< HEAD
     .btn-round.btn-icon{
         padding: 8px 9px;
     }
 
+=======
+>>>>>>> bs4-dev
 
     .navbar-nav{
         .nav-item{
@@ -97,10 +108,13 @@
                 &:hover{
                     color: $info-color;
                 }
+<<<<<<< HEAD
 
                 .stats{
                     margin-left: 10px;
                 }
+=======
+>>>>>>> bs4-dev
             }
 
             .dropdown-menu{
@@ -148,7 +162,11 @@
             width: 0;
             height: 0;
             margin-left: 5px;
+<<<<<<< HEAD
             margin-top: 18px;
+=======
+            margin-top: 20px;
+>>>>>>> bs4-dev
             vertical-align: middle;
             border-top: 4px dashed;
             border-top: 4px solid\9;
@@ -180,7 +198,10 @@
 .navbar-transparent, [class*="navbar-ct"]{
     .navbar-brand{
         color: $white-color;
+<<<<<<< HEAD
         margin-left: 10px;
+=======
+>>>>>>> bs4-dev
         @include opacity(.9);
 
         &:focus,
@@ -208,12 +229,16 @@
                 background-color: transparent;
                 border-radius: 3px;
                 color: $white-color;
+<<<<<<< HEAD
                 @include opacity(.9);
 
                 &:focus,
                 &:hover{
                     @include opacity(1);
                 }
+=======
+                @include opacity(1);
+>>>>>>> bs4-dev
             }
         }
 
@@ -371,12 +396,15 @@
     padding-top: 15px;
     background-color: transparent;
     border-bottom: 1px solid transparent;
+<<<<<<< HEAD
     z-index: 999;
     .navbar-toggler{
         .burger-lines{
             background: $white-color;
         }
     }
+=======
+>>>>>>> bs4-dev
 }
 
 .navbar-toggle{
@@ -397,6 +425,7 @@
         background-color: transparent;
     }
 }
+<<<<<<< HEAD
 
 .main-panel{
     .navbar-fixed{
@@ -432,3 +461,5 @@ nav{
         }
     }
 }
+=======
+>>>>>>> bs4-dev

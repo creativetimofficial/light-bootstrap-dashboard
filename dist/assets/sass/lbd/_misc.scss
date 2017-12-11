@@ -73,7 +73,11 @@ input:focus {
     .title-container{
         color: #fff;
         position: relative;
+<<<<<<< HEAD
         top: 150px;
+=======
+        top: 250px;
+>>>>>>> bs4-dev
         z-index: 3;
     }
     .filter:after{
@@ -93,7 +97,11 @@ input:focus {
 .documentation .page-header,
 .documentation .page-header-image,
 .documentation .page-header-image .filter:after{
+<<<<<<< HEAD
     height: 60vh;
+=======
+    height: 100vh;
+>>>>>>> bs4-dev
 }
 
 .documentation .footer{
