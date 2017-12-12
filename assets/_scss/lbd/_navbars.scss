@@ -12,9 +12,9 @@
     font-size: $font-size-navbar;
     border-radius: 0;
     min-height: 50px;
-    max-height: 61px;
     background-color: $white-navbar;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
 
     .navbar-brand {
         font-weight: 400;
@@ -39,11 +39,6 @@
             padding-left: 0;
         }
 
-        &.navbar-toggler-right{
-            padding-right: 0;
-            top: 18px;
-        }
-
         & .navbar-toggler-bar{
             width: 3px;
             height: 3px;
@@ -61,16 +56,22 @@
         }
     }
 
+    .dropdown.nav-item{
+        .dropdown-toggle:after{
+            margin-top: 8px;
+        }
+    }
 
     .navbar-nav{
+        align-items: center;
+
         .nav-item{
             .nav-link{
                 color: $default-color;
                 padding: $navbar-padding-a;
-                margin: $navbar-margin-a;
                 position: relative;
                 display: inline-flex;
-                line-height: 40px;
+                line-height: 1.2;
 
                 &.btn{
                     margin: $navbar-margin-a-btn;
@@ -129,7 +130,7 @@
             color: $white-color;
             font-weight: bold;
             line-height: 18px;
-            top: 10px;
+            top: 0;
             left: 7px;
         }
 
@@ -138,13 +139,15 @@
             width: 0;
             height: 0;
             margin-left: 5px;
-            margin-top: 20px;
+            margin-top: 12px;
             vertical-align: middle;
             border-top: 4px dashed;
             border-top: 4px solid\9;
             border-right: 4px solid transparent;
             border-left: 4px solid transparent;
         }
+
+
     }
     .btn{
        margin: $navbar-margin-btn;
@@ -163,7 +166,6 @@
 
     .nc-icon{
         font-weight: 700;
-        margin-top: 10px;
     }
 }
 
