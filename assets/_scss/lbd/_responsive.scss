@@ -14,6 +14,10 @@
         @include transform-origin($dropdown-coordinates);
 
     }
+    .close-layer,
+    .nav-mobile-menu{
+        display: none !important;
+    }
 
     .footer{
         height: 60px;
@@ -85,7 +89,7 @@
     .sidebar{
         right: 0 !important;
         left: auto;
-        position: absolute;
+        position: fixed;
         @include transform-translate-3d(262px);
         @include transition (0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
     }
@@ -161,9 +165,6 @@
         width: 100%;
     }
 
-    .navbar-brand{
-        padding: 15px 15px;
-    }
     .navbar-transparent{
         padding-top: 15px;
         background-color: rgba(0, 0, 0, 0.45);
@@ -175,11 +176,10 @@
        left: 0;
        background-color: white;
     }
-    .navbar .container{
-        left: 15px;
-        width: 100%;
-        position: relative;
-        top: -10px;
+
+    .navbar{
+        padding-right: 30px;
+        padding-left: 30px;
     }
 
     .navbar-nav{

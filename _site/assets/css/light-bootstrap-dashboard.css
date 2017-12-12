@@ -1,7 +1,7 @@
 /*!
 
  =========================================================
- * Light Bootstrap Dashboard - v2.0.0 (Bootstrap 4)
+ * Light Bootstrap Dashboard - v2.0.1 (Bootstrap 4)
  =========================================================
 
  * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard
@@ -188,6 +188,16 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
 
 .documentation .navbar {
   z-index: 21; }
+
+.card-tasks .card-body .table td {
+  font-size: 14px; }
+.card-tasks .card-body .table td .btn {
+  font-size: 14px; }
+.card-tasks .card-body .table td .btn-info {
+  margin-top: 3px;
+  padding-right: 0; }
+.card-tasks .card-body .table td:last-child {
+  padding-right: 0; }
 
 .sidebar, body > .navbar-collapse {
   position: absolute;
@@ -1162,9 +1172,9 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   font-size: 16px;
   border-radius: 0;
   min-height: 50px;
-  max-height: 61px;
   background-color: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 15px; }
 .navbar .navbar-brand {
   font-weight: 400;
   margin: 5px 0px;
@@ -1182,9 +1192,6 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   position: relative;
   left: 0;
   padding-left: 0; }
-.navbar .navbar-toggler.navbar-toggler-right {
-  padding-right: 0;
-  top: 18px; }
 .navbar .navbar-toggler .navbar-toggler-bar {
   width: 3px;
   height: 3px;
@@ -1198,13 +1205,16 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   height: 2px;
   border-radius: 1px;
   margin: 4px auto; }
+.navbar .dropdown.nav-item .dropdown-toggle:after {
+  margin-top: 8px; }
+.navbar .navbar-nav {
+  align-items: center; }
 .navbar .navbar-nav .nav-item .nav-link {
   color: #888888;
   padding: 10px 15px;
-  margin: 10px 3px;
   position: relative;
   display: inline-flex;
-  line-height: 40px; }
+  line-height: 1.2; }
 .navbar .navbar-nav .nav-item .nav-link.btn {
   margin: 15px 3px;
   padding: 8px 16px; }
@@ -1243,14 +1253,14 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   color: #FFFFFF;
   font-weight: bold;
   line-height: 18px;
-  top: 10px;
+  top: 0;
   left: 7px; }
 .navbar .navbar-nav .dropdown-toggle:after {
   display: inline-block;
   width: 0;
   height: 0;
   margin-left: 5px;
-  margin-top: 20px;
+  margin-top: 12px;
   vertical-align: middle;
   border-top: 4px dashed;
   border-top: 4px solid\9;
@@ -1267,8 +1277,7 @@ a:focus, a:active, button::-moz-focus-inner, input::-moz-focus-inner, input[type
   left: auto;
   border-radius: 0; }
 .navbar .nc-icon {
-  font-weight: 700;
-  margin-top: 10px; }
+  font-weight: 700; }
 
 .navbar-transparent .navbar-brand, [class*="navbar-ct"] .navbar-brand {
   color: #FFFFFF;
@@ -1589,7 +1598,8 @@ Copyright (c) 2015 Daniel Eden
 .show .dropdown-menu {
   opacity: 1;
   filter: alpha(opacity=100);
-  visibility: visible; }
+  visibility: visible;
+  transform: translate3d(0px, 0px, 0px) !important; }
 .select .dropdown-menu {
   border-radius: 0 0 10px 10px;
   -webkit-box-shadow: none;
@@ -2471,6 +2481,9 @@ Copyright (c) 2015 Daniel Eden
     -ms-transform-origin: 29px -50px;
     transform-origin: 29px -50px; }
 
+  .close-layer, .nav-mobile-menu {
+    display: none !important; }
+
   .footer {
     height: 60px; }
   .footer .footer-menu {
@@ -2520,7 +2533,7 @@ Copyright (c) 2015 Daniel Eden
   .sidebar {
     right: 0 !important;
     left: auto;
-    position: absolute;
+    position: fixed;
     -webkit-transform: translate3d(262px, 0, 0);
     -moz-transform: translate3d(262px, 0, 0);
     -o-transform: translate3d(262px, 0, 0);
@@ -2608,9 +2621,6 @@ Copyright (c) 2015 Daniel Eden
   .main-panel {
     width: 100%; }
 
-  .navbar-brand {
-    padding: 15px 15px; }
-
   .navbar-transparent {
     padding-top: 15px;
     background-color: rgba(0, 0, 0, 0.45); }
@@ -2622,11 +2632,9 @@ Copyright (c) 2015 Daniel Eden
     left: 0;
     background-color: white; }
 
-  .navbar .container {
-    left: 15px;
-    width: 100%;
-    position: relative;
-    top: -10px; }
+  .navbar {
+    padding-right: 30px;
+    padding-left: 30px; }
 
   .navbar-nav .nav-item {
     float: none;
