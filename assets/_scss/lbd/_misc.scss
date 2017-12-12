@@ -106,3 +106,24 @@ input:focus {
 .documentation .navbar{
     z-index: 21;
 }
+
+.card-tasks{
+    .card-body{
+        .table{
+            td{
+                font-size: 14px;
+
+                .btn{
+                    font-size: 14px;
+                }
+                .btn-info{
+                    margin-top: 3px;
+                    padding-right: 0;
+                }
+            }
+            td:last-child{
+                padding-right: 0;
+            }
+        }
+    }
+}
