@@ -67,6 +67,10 @@ a:visited {
 a:hover {
   color: #111;
   text-decoration: underline; }
+.social-media-list a:hover {
+  text-decoration: none; }
+.social-media-list a:hover .username {
+  text-decoration: underline; }
 
 /**
  * Blockquotes
@@ -135,19 +139,24 @@ pre > code {
 .icon > svg path {
   fill: #828282; }
 
+.social-media-list .icon {
+  padding-right: 5px; }
+.social-media-list li + li {
+  padding-top: 5px; }
+
 /**
  * Site header
  */
 .site-header {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
-  min-height: 56px;
+  min-height: 55.95px;
   position: relative; }
 
 .site-title {
   font-size: 26px;
   font-weight: 300;
-  line-height: 56px;
+  line-height: 54px;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left; }
@@ -156,7 +165,9 @@ pre > code {
 
 .site-nav {
   float: right;
-  line-height: 56px; }
+  line-height: 54px; }
+.site-nav .nav-trigger {
+  display: none; }
 .site-nav .menu-icon {
   display: none; }
 .site-nav .page-link {
@@ -173,6 +184,13 @@ pre > code {
     border: 1px solid #e8e8e8;
     border-radius: 5px;
     text-align: right; }
+  .site-nav label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer; }
   .site-nav .menu-icon {
     display: block;
     float: right;
@@ -183,10 +201,10 @@ pre > code {
     text-align: center; }
   .site-nav .menu-icon > svg path {
     fill: #424242; }
-  .site-nav .trigger {
+  .site-nav input ~ .trigger {
     clear: both;
     display: none; }
-  .site-nav:hover .trigger {
+  .site-nav input:checked ~ .trigger {
     display: block;
     padding-bottom: 5px; }
   .site-nav .page-link {
