@@ -7,7 +7,7 @@
 
 The product represents a big suite of front-end developer tools that can help you jump start your project. We have created it thinking about things you actually need in a dashboard. Light Bootstrap Dashboard contains multiple handpicked and optimised plugins. Everything is designed to fit with one another. As you will be able to see, the dashboard you can access on Creative Tim is a customisation of this product.
 
-It comes with 6 filter colors for the sidebar (“black”, “azure”,”green”,”orange”,”red”,”purple”) and an option to have a background image.
+It comes with 6 filter colors for the sidebar (`black`, `azure`,`green`,`orange`,`red`,`purple`) and an option to have a background image.
 
 Special thanks go to: Robert McIntosh for the notification system Chartist for the wonderful charts We are very excited to share this dashboard with you and we look forward to hearing your feedback!
 
@@ -55,17 +55,11 @@ Light Bootstrap Dashboard
 │   │       ├── chartist.min.js
 │   │       ├── jquery.sharrre.js
 │   │       └── nouislider.min.js
-│   └── main.css
-│   │       └── nouislider.min.js
-│   └── main.css
-├── deploy.sh
 ├── documentation
 │   ├── template.html
 │   └── tutorial-components.html
 ├── examples
 │   ├── dashboard.html
-│   ├── forms
-│   │   └── extended.html
 │   ├── icons.html
 │   ├── maps.html
 │   ├── notifications.html
