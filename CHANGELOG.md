@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.0.1] 2017-12-12
+### Bugfixing
+- hide `.nav-mobile-menu` on sidebar
+- navbar icons arrange
+- other bug fixes
+
 ## [2.0.0] 2017-12-11
 ### Major Release
 - update to Bootstrap 4 Beta
