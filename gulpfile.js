@@ -2,7 +2,7 @@
 'use strict';
 
 const productname = 'light-bootstrap-dashboard',
-      version = 'v2.0.0';
+      version = 'v2.0.1';
 
 const
 
