@@ -11,20 +11,22 @@ It comes with 6 filter colors for the sidebar (`black`, `azure`,`green`,`orange`
 
 Special thanks go to: Robert McIntosh for the notification system Chartist for the wonderful charts We are very excited to share this dashboard with you and we look forward to hearing your feedback!
 
-Links:
+## Links:
 
 - [Live Preview](http://demos.creative-tim.com/light-bootstrap-dashboard/examples/dashboard.html?ref=github-repo)
 - [Video Tutorial](https://www.youtube.com/watch?v=c3M3NQtFyqM)
 - [Light Bootstrap Dashboard PRO](https://www.creative-tim.com/product/light-bootstrap-dashboard-pro) (from $39)
 
-Quick start
+## Quick start
 
 Quick start options:
 
 Download from Github.
 Download from Creative Tim.
 Clone the repo: git clone https://github.com/creativetimofficial/light-bootstrap-dashboard.git.
-What's included
+
+
+### What's included
 
 Within the download you'll find the following directories and files:
 
@@ -68,11 +70,12 @@ Light Bootstrap Dashboard
 └── package-lock.json
 ```
 
-License
+### License
 
 Copyright 2019 Creative Tim (http://www.creative-tim.com)
 Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE.md)
-Useful Links
+
+## Useful Links
 
 More products from Creative Tim: http://www.creative-tim.com/products
 
