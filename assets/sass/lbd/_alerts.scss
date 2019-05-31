@@ -31,6 +31,11 @@
         margin-top: -15px;
     }
 
+    i.nc-simple-remove{
+        font-size: 12px !important;
+        font: bold normal normal 14px/1 'nucleo-icons';
+    }
+
     button.close{
         position: absolute;
         right: 10px;
@@ -41,13 +46,12 @@
         display: block;
         border-radius: 50%;
         opacity: .4;
-        line-height: 11px;
+        line-height: 9px;
         width: 25px;
         height: 25px;
         outline: 0 !important;
         text-align: center;
         padding: 3px;
-        padding-top: 1px;
         font-weight: 300;
 
         &:hover{
@@ -68,6 +72,9 @@
     &.alert-with-icon{
         padding-left: 65px;
     }
+}
+.alert-primary{
+    background-color: $blue-navbar;
 }
 .alert-info{
      background-color: $azure-navbar;

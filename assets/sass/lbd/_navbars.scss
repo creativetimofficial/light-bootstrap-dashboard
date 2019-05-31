@@ -1,46 +1,120 @@
 .nav {
-    > li{
-        > a:hover,
-        > a:focus{
+    .nav-item{
+        .nav-link:hover,
+        .nav-link:focus{
             background-color: transparent;
         }
     }
-}
 
+}
 .navbar{
     border: $none;
     font-size: $font-size-navbar;
     border-radius: 0;
-
-    & > .container .navbar-brand,
-    & > .container-fluid .navbar-brand{
-        margin-left: 0;
-    }
+    min-height: 50px;
+    max-height: 61px;
+    background-color: $white-navbar;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     .navbar-brand {
-        font-weight: $font-weight-normal;
-        margin: $navbar-margin-brand;
-        padding: $navbar-padding-brand;
-        font-size: $font-size-large-navbar;
+        font-weight: 400;
+        margin: 5px 0px;
+        font-size: 20px;
+        color: $default-color;
+
+        &:hover{
+            color: #5e5e5e;
+        }
     }
+    .navbar-toggler{
+        width: 37px;
+        height: 27px;
+        vertical-align: middle;
+        outline: 0;
+        cursor: pointer;
+
+        &.navbar-toggler-left{
+            position: relative;
+            left: 0;
+            padding-left: 0;
+        }
+
+        &.navbar-toggler-right{
+            padding-right: 0;
+            top: 18px;
+        }
+
+        & .navbar-toggler-bar{
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+        .burger-lines{
+            display: block;
+            position: relative;
+            background-color: #888;
+            width: 24px;
+            height: 2px;
+            border-radius: 1px;
+            margin: 4px auto;
+        }
+    }
+
+
     .navbar-nav{
-         > li > a {
-             padding: $navbar-padding-a;
-             margin: $navbar-margin-a;
-             position: relative;
-         }
-         > li > a.btn{
-             margin: $navbar-margin-a-btn;
-             padding: $padding-base-vertical $padding-base-horizontal;
-         }
-         > li > a.btn-round{
-             margin: $navbar-margin-a-btn-round;
-         }
-         > li > a [class^="fa"]{
-             font-size: $font-size-large + 1;
-             position: relative;
-             line-height: 16px;
-             top: 1px;
+        .nav-item{
+            .nav-link{
+                color: $default-color;
+                padding: $navbar-padding-a;
+                margin: $navbar-margin-a;
+                position: relative;
+                display: inline-flex;
+                line-height: 40px;
+
+                &.btn{
+                    margin: $navbar-margin-a-btn;
+                    padding: $padding-base-vertical $padding-base-horizontal;
+                }
+
+                &.btn-round{
+                    margin: $navbar-margin-a-btn-round;
+                }
+
+                [class^="fa"]{
+                    font-size: $font-size-large + 1;
+                    position: relative;
+                    line-height: 40px;
+                    top: 1px;
+                }
+
+                &:hover{
+                    color: $info-color;
+                }
+            }
+
+            .dropdown-menu{
+                border-radius: $border-radius-extreme;
+                margin-top: -5px;
+
+                .dropdown-item{
+                    &:first-child{
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                    }
+                    &:last-child{
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                    }
+                }
+
+                .divider{
+                    height: 1px;
+                    margin: 5px 0;
+                    overflow: hidden;
+                    background-color: #e5e5e5;
+                }
+            }
         }
 
         .notification{
@@ -52,11 +126,24 @@
             padding: 0 5px;
             height: 18px;
             font-size: 12px;
-            color: #FFFFFF;
+            color: $white-color;
             font-weight: bold;
             line-height: 18px;
-            top: 0px;
+            top: 10px;
             left: 7px;
+        }
+
+        .dropdown-toggle:after{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 5px;
+            margin-top: 20px;
+            vertical-align: middle;
+            border-top: 4px dashed;
+            border-top: 4px solid\9;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
         }
     }
     .btn{
@@ -66,9 +153,6 @@
     .btn-simple{
         font-size: $font-size-medium;
     }
-    .caret{
-       // @include center-item();
-    }
 
     &.fixed{
         width: calc(100% - $sidebar-width);
@@ -77,11 +161,10 @@
         border-radius: 0;
     }
 
-}
-
-.navbar-nav > li > .dropdown-menu{
-    border-radius: $border-radius-extreme;
-    margin-top: -5px;
+    .nc-icon{
+        font-weight: 700;
+        margin-top: 10px;
+    }
 }
 
 .navbar-transparent, [class*="navbar-ct"]{
@@ -93,42 +176,43 @@
         &:hover{
             background-color: transparent;
             @include opacity(1);
+            color: $white-color;
         }
     }
 
     .navbar-nav{
-        > li > a:not(.btn){
-            color: $white-color;
-            border-color: $white-color;
-            @include opacity(0.8);
+        .nav-item{
+            .nav-link:not(.btn){
+                color: $white-color;
+                border-color: $white-color;
+                @include opacity(0.8);
+            }
         }
-        > .active > a:not(.btn),
-        > .active > a:hover:not(.btn),
-        > .active > a:focus:not(.btn),
-        > li > a:hover:not(.btn),
-        > li > a:focus:not(.btn){
-            background-color: transparent;
-            border-radius: 3px;
-            color: $white-color;
-            @include opacity(1);
+
+        .active,
+        .nav-item{
+            .nav-link:not(.btn),
+            .nav-link:hover:not(.btn),
+            .nav-link:focus:not(.btn),{
+                background-color: transparent;
+                border-radius: 3px;
+                color: $white-color;
+                @include opacity(1);
+            }
         }
-        .nav > li > a.btn:hover{
+
+        .nav .nav-item .nav-link.btn:hover{
             background-color: transparent;
         }
 
-        > .dropdown > a .caret,
-        > .dropdown > a:hover .caret,
-        > .dropdown > a:focus .caret{
-            border-bottom-color: $white-color;
-            border-top-color: $white-color;
-        }
-
-        > .open > a,
-        > .open > a:hover,
-        > .open > a:focus {
-            background-color: transparent;
-            color: $white-color;
-            @include opacity(1);
+        .show{
+            .nav-link,
+            .nav-link:hover,
+            .nav-link:focus{
+                background-color: transparent;
+                color: $white-color;
+                @include opacity(1);
+            }
         }
     }
 
@@ -145,7 +229,7 @@
     .btn-default.btn-fill:focus,
     .btn-default.btn-fill:active,
     .btn-default.btn-fill.active,
-    .open .dropdown-toggle.btn-fill.btn-default{
+    .show .dropdown-toggle.btn-fill.btn-default{
         border-color: $white-color;
         @include opacity(1);
     }
@@ -157,44 +241,38 @@
     }
 }
 
-.nav-open .nav .caret{
-    border-bottom-color: $white-color;
-    border-top-color: $white-color;
-}
 
 .navbar-default {
     background-color: $white-navbar;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     .navbar-nav{
-        > li > a:not(.btn){
-            color: $dark-gray;
+        .nav-item{
+            .nav-link:not(.btn){
+                color: $dark-gray;
+            }
         }
 
-        > .active > a,
-        > .active > a:not(.btn):hover,
-        > .active > a:not(.btn):focus,
-        > li > a:not(.btn):hover,
-        > li > a:not(.btn):focus {
+        .active .nav-link,
+        .active .nav-link:not(.btn):hover,
+        .active .nav-link:not(.btn):focus,
+        .nav-item .nav-link:not(.btn):hover,
+        .nav-item .nav-link:not(.btn):focus{
             background-color: transparent;
             border-radius: 3px;
             color: $info-color;
             @include opacity(1);
         }
 
-        > .dropdown > a:hover .caret,
-        > .dropdown > a:focus .caret {
-            border-bottom-color: $info-color;
-            border-top-color: $info-color;
-
+        .show{
+            .nav-link,
+            .nav-link:hover,
+            .nav-link:focus{
+                background-color: transparent;
+                color: $info-color;
+            }
         }
 
-        > .open > a,
-        > .open > a:hover,
-        > .open > a:focus{
-            background-color: transparent;
-            color: $info-color;
-        }
 
         .navbar-toggle:hover,.navbar-toggle:focus {
             background-color: transparent;
@@ -221,10 +299,12 @@
         margin-bottom: 12px;
     }
     .navbar-nav{
-        > li > a{
-            text-align: center;
-            padding: $navbar-padding-a-icons;
-            margin: $navbar-margin-a-icons;
+        .nav-item{
+            .nav-link{
+                text-align: center;
+                padding: $navbar-padding-a-icons;
+                margin: $navbar-margin-a-icons;
+            }
         }
 
         [class^="pe"] {

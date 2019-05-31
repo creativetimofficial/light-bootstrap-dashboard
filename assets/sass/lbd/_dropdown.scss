@@ -6,65 +6,65 @@
     display: block;
     z-index: 9000;
     position: absolute;
-    
-    @include opacity(0); 
+
+    @include opacity(0);
     @include box-shadow($dropdown-shadow);
-        
-    .open &{
+
+    .show &{
         @include opacity(1);
         visibility: visible;
-    }    
+    }
     .select &{
-       border-radius: $border-radius-bottom; 
+       border-radius: $border-radius-bottom;
        @include box-shadow(none);
        @include transform-origin($select-coordinates);
        @include transform-scale(1);
        @include transition($fast-transition-time, $transition-linear);
        margin-top: -20px;
     }
-    .select.open &{
+    .select.show &{
         margin-top: -1px;
     }
-    
-    > li > a {
+
+    .dropdown-item {
        padding: $padding-base-vertical $padding-base-horizontal;
        color: #333333;
-       
+
        img{
            margin-top: -3px;
        }
     }
-    > li > a:focus{
+    .dropdown-item:focus{
         outline: 0 !important;
     }
 
     .btn-group.select &{
         min-width: 100%;
     }
-    
+
     > li:first-child > a{
        border-top-left-radius: $border-radius-extreme;
        border-top-right-radius: $border-radius-extreme;
     }
-    
+
     > li:last-child > a{
         border-bottom-left-radius: $border-radius-extreme;
         border-bottom-right-radius: $border-radius-extreme;
     }
-    
+
     .select & > li:first-child > a{
         border-radius: 0;
         border-bottom: 0 none;
     }
-    
-    > li > a:hover,
-    > li > a:focus {
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
         background-color: $smoke-bg;
         color: #333333;
         opacity: 1;
         text-decoration: none;
     }
-    
+
     &.dropdown-blue > li > a:hover,
     &.dropdown-blue > li > a:focus{
         background-color: $light-blue;
@@ -86,6 +86,24 @@
         background-color: $light-red;
     }
 
+    .dropdown-item{
+        i[class*="nc-icon"]{
+            font-size: 18px;
+            text-align: center;
+            line-height: 25px;
+            float: left;
+            padding-right: 10px;
+        }
+    }
+
+    &.dropdown-menu-right{
+        &:before,
+        &:after{
+            right: 12px !important;
+            left: auto !important;
+        }
+    }
+
 }
 
 .dropdown-with-icons{
@@ -97,7 +115,7 @@
         text-align: center;
         line-height: 28px;
         float: left;
-        
+
         &[class^="pe-"]{
              font-size: 24px;
              width: 46px;
@@ -109,12 +127,10 @@
     }
 }
 
-//fix bug for the select items in btn-group 
+//fix bug for the select items in btn-group
 .btn-group.select{
     overflow: hidden;
 }
-.btn-group.select.open{
+.btn-group.select.show{
     overflow: visible;
 }
-
-
