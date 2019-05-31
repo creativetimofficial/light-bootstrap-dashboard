@@ -1,5 +1,5 @@
 # [Light Bootstrap Dashboard](http://www.creative-tim.com/product/light-bootstrap-dashboard)
-[![version][2.0.0]][CHANGELOG] [![license][license-badge]][LICENSE]
+[CHANGELOG] [![license][license-badge]][LICENSE]
 
 ![alt text](http://s3.amazonaws.com/creativetim_bucket/products/32/original/opt_lbd_thumbnail.jpg "Light Bootstrap Dashboard")
 
