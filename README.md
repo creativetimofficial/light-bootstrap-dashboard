@@ -1,5 +1,5 @@
 # [Light Bootstrap Dashboard](http://www.creative-tim.com/product/light-bootstrap-dashboard)
-[![version][2.0.0]][CHANGELOG] [![license][license-badge]][LICENSE]
+[![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
 
 ![alt text](http://s3.amazonaws.com/creativetim_bucket/products/32/original/opt_lbd_thumbnail.jpg "Light Bootstrap Dashboard")
 
@@ -70,7 +70,7 @@ Light Bootstrap Dashboard
 
 License
 
-Copyright 2017 Creative Tim (http://www.creative-tim.com)
+Copyright 2019 Creative Tim (http://www.creative-tim.com)
 Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE.md)
 Useful Links
 
