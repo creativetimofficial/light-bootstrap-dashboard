@@ -84,6 +84,8 @@ Freebies: http://www.creative-tim.com/products
 
 Affiliate Program (earn money): http://www.creative-tim.com/affiliates/new
 
+Laravel Integration: <https://github.com/rehmatworks/Laravel-Light>
+
 Social Media:
 
 Twitter: https://twitter.com/CreativeTim
