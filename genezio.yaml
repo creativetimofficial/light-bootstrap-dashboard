@@ -1,0 +1,9 @@
+name: light-bootstrap-dashboard
+region: us-east-1
+frontend:
+  # Specifies the path of your code.
+  path: .
+  # Specifies the folder where the build is located.
+  # This is the folder that will be deployed.
+  publish: .
+yamlVersion: 2
